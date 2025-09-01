@@ -1,17 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(7, 7, 7);
-}
 
-header{
-    background-color: black;
-}
 
-.menu-list a{
-    color: white;
-}
+/* HEADER */
+

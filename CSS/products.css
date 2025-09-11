@@ -3,3 +3,87 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+
+aside{
+    width: 250px;
+    color: white;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: black;
+}
+
+
+
+/* SECCIÓN PRODUCTOS */
+
+.container__flex__products-img{
+    display: flex;
+    flex-direction: column;
+}
+
+.container__h1-products{
+    margin-bottom: 30px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.sect__products{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+    gap: 130px;
+}
+
+.container__img-products{
+    background-color: rgb(203, 203, 203);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+                    /* PRODUCTOS */
+
+/* REMERA */
+.remBrucs-product{
+    border-radius: 20px;
+}
+
+/* ZAPATILLA */
+.zapBrucs-product{
+    border-radius: 20px;
+}
+
+.gorraBrucs-product{
+    border-radius: 20px;
+}
+
+.buzBrucs-product{
+    border-radius: 20px;
+}
+
+
+
+.container__grid-columns__products-img{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-grow: 1;
+}
+
+
+.container__img-caractbuz{
+    display: grid;
+    align-items: center;
+}
+.buzBrucs_caract-product{
+    width: 100%;
+    padding: 40px;
+}

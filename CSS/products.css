@@ -18,9 +18,12 @@ main{
     background-color: black;
 }
 
+                            /* MENU */
 
 
-/* SECCIÓN PRODUCTOS */
+
+
+                        /* SECCIÓN PRODUCTOS */
 
 .container__flex__products-img{
     display: flex;
@@ -42,15 +45,28 @@ main{
 }
 
 .container__img-products{
-    background-color: rgb(203, 203, 203);
+    background-color: #141414;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
 }
 
+.container__img-products img{
+    width: 100%;
+    max-height: 300px;       
+    object-fit: contain;    
+}
+
 
                     /* PRODUCTOS */
+
+.tittle-products{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 /* REMERA */
 .remBrucs-product{
@@ -86,4 +102,28 @@ main{
 .buzBrucs_caract-product{
     width: 100%;
     padding: 40px;
+}
+
+.btn-add {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #111;
+  color: #fff; 
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #444; 
+  transform: scale(1.05);
+}
+
+.btn-add:active {
+  background-color: #000; 
+  transform: scale(0.98);
 }

@@ -44,11 +44,14 @@ main{
     gap: 130px;
 }
 
-.container__img-products{
-    background-color: #141414;
-    border: 1px solid #ddd;
+.container__img-products{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #0e0e0e;
+    border: 1px solid #1c1c1c;
     border-radius: 5px;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
 }
 
@@ -80,6 +83,7 @@ main{
 
 .gorraBrucs-product{
     border-radius: 20px;
+    margin-top: 30px;
 }
 
 .buzBrucs-product{
@@ -104,12 +108,24 @@ main{
     padding: 40px;
 }
 
+.sect__tittle-price-caract__products{
+    padding: 20px;
+}
+
+.sect__tittle-price-caract__products h3{
+    color: white;
+}
+
+.sect__tittle-price-caract__products p{
+    color: white;
+}
+
+
 .btn-add {
-  display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #111;
-  color: #fff; 
+  background-color: #fff;
+  color: #212121; 
   font-size: 14px;
   font-weight: bold;
   border: none;
@@ -119,7 +135,8 @@ main{
 }
 
 .btn-add:hover {
-  background-color: #444; 
+  background-color: #1a1a1a;
+  color: aliceblue; 
   transform: scale(1.05);
 }
 
@@ -127,3 +144,10 @@ main{
   background-color: #000; 
   transform: scale(0.98);
 }
+
+.btn-add i {
+  font-size: 20px; 
+  margin-left: 8px; 
+  color: inherit;
+}
+

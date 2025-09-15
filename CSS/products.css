@@ -1,9 +1,115 @@
+/* **** LETRAS **** */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+                        /* HEADER */
+
+header{
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+    padding: 10px 20px;
+}
+
+.header__container-ul{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.header__container-ul i{
+    color: white;
+    font-size: 40px;
+}
+
+
+.container__logo img{
+    width: 70px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+}
+
+.menu-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.menu-list li{
+    list-style-type: none;
+}
+
+.menu-list li a{
+    text-decoration: none;
+    font-family: "Inconsolata", monospace;
+    font-style: normal;
+    letter-spacing:2px;
+    color: white;
+}
+
+#a__link--active{
+    color: rgb(57, 57, 57);
+    border-bottom: 1px solid rgb(211,   211, 211);
+    padding-bottom: 5px;
+    border-top: 1px solid rgb(211, 211, 211);
+    padding-top: 5px;
+}
+
+.menu-list li a:hover{
+    color: rgb(57, 57, 57);
+    border-top: 1px solid rgb(211, 211, 211);
+    padding-top: 5px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    padding-bottom: 5px;
+    transition: 0.2s;
+}
+
+                    /* CARRITO */
+
+.contaier__bi-cart4{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 37px;
+}
+
+.container__i-carrito{
+    display: flex;
+    width: 40px;
+    height: 30px;
+    background-color: #0e0e0e;
+    justify-content: center;
+}
+
+.contaier__bi-cart4 i{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+
+.container__i-carrito{
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.header__container-ul i:hover{
+    color: rgb(57, 57, 57);
+    transition: 0.2s;
+}
+
+
+                        /* MENU */
 
 
 aside{

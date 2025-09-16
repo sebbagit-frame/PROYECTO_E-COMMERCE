@@ -107,3 +107,71 @@ header{
     color: rgb(57, 57, 57);
     transition: 0.2s;
 }
+
+
+
+main{
+    background-color: black;
+}
+
+
+
+                    /* SECCIÓN 1 */
+
+.container-princ__h1__p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+
+.tittle1__BRUCS{
+    color: white;
+    font-size: 5em;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 40px;
+}
+
+.text1__BRUCS{
+    color: white;
+    font-size: 2.5em;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+}
+
+.text1OnBrucs{
+    color: white;
+    font-size: 1.2em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+
+                    /* SECCIÓN 2 */
+.s2-container__list{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.s2-li__list{
+    flex-direction: column;
+    color: white;
+    list-style-type: none;
+    font-size: 2em;
+}
+
+p{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}

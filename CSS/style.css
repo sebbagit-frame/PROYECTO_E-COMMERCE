@@ -75,6 +75,23 @@ header{
 }
 
 
+p{
+    color: white;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+
                     /* CARRITO */
 
 .contaier__bi-cart4{
@@ -127,21 +144,21 @@ main{
 
 
 .tittle1__BRUCS{
-    color: white;
     font-size: 5em;
     font-family: 'Times New Roman', Times, serif;
     margin: 40px;
+    color: white;
+    font-size: 64px;
+  text-shadow: 2px 3px 5px rgba(228, 228, 228, 0.7);
 }
 
 .text1__BRUCS{
-    color: white;
     font-size: 2.5em;
     font-family: 'Courier New', Courier, monospace;
     margin: 20px;
 }
 
 .text1OnBrucs{
-    color: white;
     font-size: 1.2em;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
@@ -154,24 +171,50 @@ main{
     display: flex;
     text-align: center;
     justify-content: center;
-    padding: 40px;
+    background: linear-gradient(to right, #1a1a1a, #000000);
+    padding: 40px 20px; 
+    max-width: 900px; 
+    margin: 40px auto;
+    border-radius: 20px;
 }
 
 .s2-li__list{
     flex-direction: column;
-    color: white;
     list-style-type: none;
     font-size: 2em;
-}
-
-p{
     color: white;
 }
 
-h2{
-    color: white;
+
+
+.container__li-s2Of{
+    padding: 20px;
 }
 
-h3{
-    color: white;
+
+
+
+                    /* FLEX img's */
+.container__info__img{
+    display: grid;
+    gap: 30px;
+    width: 70%; 
+    margin: 40px auto;
+    background-color: #0f0e0e;
+    padding: 20px;
+}
+
+.div1-hr{
+    margin: 20px;
+}
+
+
+
+
+
+
+                        /* FOOTER */
+footer{
+        background: linear-gradient(to right, #1a1a1a, #000000);
+
 }

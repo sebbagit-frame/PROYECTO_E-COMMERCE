@@ -176,6 +176,7 @@ main{
     max-width: 900px; 
     margin: 40px auto;
     border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6); 
 }
 
 .s2-li__list{
@@ -196,25 +197,130 @@ main{
 
                     /* FLEX img's */
 .container__info__img{
-    display: grid;
+    display: flex;
     gap: 30px;
     width: 70%; 
     margin: 40px auto;
     background-color: #0f0e0e;
     padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6); 
 }
+
+.info-item{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+                /* IMG's */
+
+.info-item__manga{
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
+}
+
+.info-item__cost{
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6); 
+}
+
+
+        /* IMG's Titulos y textos */
+.tittle__IMG-mang-cost{
+    font-weight: 400;
+    font-size: 2em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+}
+
+.text__IMG-mang-cost{
+    font-size: 1.2em;
+    color: #9a9a9a;
+}
+
+
 
 .div1-hr{
     margin: 20px;
 }
 
 
+            /* SECCION VIDEO */
+.container__vid-brucs{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    padding: 40px;
+}
 
 
+.cont__h2-vid{
+    margin: 20px;
+    padding: 20px;
+}
+
+.tittle-h2__vid{
+    font-size: 2.5em;
+    color: #9a9a9a;
+}
+
+.cont-vidyt{
+    margin: 20px;
+    padding: 20px;
+}
+
+.vidyt{
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6); 
+}
+
+
+.div2-hr{
+    margin: 20px;
+}
+
+
+
+
+                /* SECCIÓN BUZO -BRUCS */
+
+.cont-dis{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+.sect-tittle_text-dis{
+    padding: 20px;
+}
+
+.tittle-dis{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+}
+
+.text-dis{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2em;
+}
+
+
+
+                    /* ACCOUNTS */
+.sect-accRed{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: #0d0d0d;
+}
 
 
                         /* FOOTER */
 footer{
         background: linear-gradient(to right, #1a1a1a, #000000);
-
 }

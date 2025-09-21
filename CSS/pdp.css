@@ -104,3 +104,31 @@ header{
     color: rgb(57, 57, 57);
     transition: 0.2s;
 }
+
+main{
+    background-color: #000000;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+.sect-accRed{
+    background: #0d0d0d;
+}
+
+footer{
+        background: linear-gradient(to right, #1a1a1a, #000000);
+}

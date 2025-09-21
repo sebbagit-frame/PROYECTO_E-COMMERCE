@@ -257,3 +257,148 @@ main{
   color: inherit;
 }
 
+
+
+h1{
+    color: white;
+}
+
+h2{
+    color: white;
+}
+
+h3{
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+
+                            /* SECCIÓN BARRAS */
+
+.sect_global-barr {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    padding: 70px;
+    background-color: #0f0e0e;
+}
+
+.box-barras{
+    flex: 1;          
+    margin: 0 10px;   
+    color: white;
+    text-align: center;
+}
+
+                    /* PRE-FOOTER */
+.sect-accRed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background: #0d0d0d;
+}
+
+
+                    /* INFO EXTRA */
+.info-extra{
+    display: grid;
+    gap: 5px;
+}
+
+
+                    /* NEWSLETTER */
+
+.container__h3-p__desc-susc__newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__h3-p__desc-susc__newsletter h3{
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text-suscrip{
+    color: #333;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container__inp-button__newsletter{
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    border-bottom: 1px solid #282828;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+}
+
+.newsletter input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    color: #333;
+    padding-bottom: .5rem;
+}
+
+.newsletter button {
+    border: none;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    color: #4e4e4e;
+    transition: transform 0.2s ease;
+}
+
+.newsletter button:hover {
+    color: #777777;
+    transform: translateX(3px);
+}
+
+
+
+                        /* CUENTAS */
+.cont__redAccounts{
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.sectAccounts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+                        /* FOOTER */
+footer{
+        background: linear-gradient(to right, #1a1a1a, #000000);
+}
+
+.seccCOPY{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-spanDef{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 1000px;
+}

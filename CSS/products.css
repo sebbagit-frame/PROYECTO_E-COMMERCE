@@ -168,6 +168,14 @@ main{
 }
 
 
+.container__img-products:hover{
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
+
+}
+
+
                     /* PRODUCTOS */
 
 .tittle-products{

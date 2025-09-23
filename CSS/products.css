@@ -171,8 +171,7 @@ main{
 .container__img-products:hover{
     transition: transform 0.3s ease-in-out;
     transform: scale(1.1);
-        box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
-
+    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
 }
 
 
@@ -210,6 +209,7 @@ main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     flex-grow: 1;
+    margin-bottom: 100px;
 }
 
 
@@ -291,7 +291,7 @@ p{
     justify-content: space-between; 
     align-items: flex-start;
     padding: 70px;
-    background-color: #0f0e0e;
+    background-color: #070707;
 }
 
 .box-barras{
@@ -299,6 +299,22 @@ p{
     margin: 0 10px;   
     color: white;
     text-align: center;
+    background-color: #0d0d0d;
+    padding: 40px;
+    border-radius: 12px;
+}
+
+
+.box-barras h3{
+    color: #777777;
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.box-barras p{
+    color: #777777;
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
 }
 
                     /* PRE-FOOTER */

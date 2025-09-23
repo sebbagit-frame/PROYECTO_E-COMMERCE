@@ -105,6 +105,12 @@ header{
     transition: 0.2s;
 }
 
+
+
+
+                            /* MAIN */
+
+
 main{
     background-color: black;
 }
@@ -126,6 +132,119 @@ p{
 }
 
 
+.container-name__brucs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 0 150px 0;
+}
+
+.logo-brucs{
+    width: 120px;
+  height: auto;
+  fill: white; /* cambia el color del logo si es vector */
+}
+
+.container-name__brucs h3{
+    font-size: 6em;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 5px;
+    text-shadow: 2px 3px 5px rgba(235, 226, 226, 0.7);
+}
+
+
+                        /* SECCION 1 - WHO */
+
+.section__who__sect-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.subcont__hp__flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.subcont__hp__flex h1{
+    font-size: 5em;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text__who{
+    display: flex;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sec__2da__display-flex__limit__mp__eleg{
+    display: flex;
+    padding: 40px;
+}
+
+.bloque{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;          
+    margin: 0 10px;   
+    color: white;
+    text-align: center;
+    background-color: #0d0d0d;
+    padding: 40px;
+    border-radius: 12px;
+    gap: 10px;
+    
+}
+
+.tittle__2da__display-flex__limit__mp__eleg{
+    font-size: 2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.textp__2da__display-flex__limit__mp__eleg{
+    font-size: 1em;
+    font-family: 'Courier New', Courier, monospace;
+}
+             
+.bi{
+    font-size: 2em;
+}
+
+
+                        /* SECCION 2 IMG */
+.img__who2{
+    width: 450px;
+}
+
+.cont__who__global2{
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+}
+
+.subcontainer__hp__flex2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.tittle__who2{
+    font-size: 5em;
+    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.text__who2{
+    font-size: 1.5em;
+    font-family: 'Courier New', Courier, monospace;
+}
 
                     /* PRE-FOOTER */
 .sect-accRed{

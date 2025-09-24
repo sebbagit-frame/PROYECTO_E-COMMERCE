@@ -141,8 +141,9 @@ p{
 
 .logo-brucs{
     width: 120px;
-  height: auto;
-  fill: white; /* cambia el color del logo si es vector */
+    height: auto;
+    background-color: white;
+    border-radius: 100px;
 }
 
 .container-name__brucs h3{

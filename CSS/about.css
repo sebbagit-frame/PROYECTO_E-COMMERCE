@@ -262,6 +262,11 @@ p{
     gap: 5px;
 }
 
+.info-extra h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+}
+
 
                     /* NEWSLETTER */
 
@@ -336,6 +341,9 @@ p{
     gap: 5px;
 }
 
+.cont__tittleAccounts h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
                         /* FOOTER */
 footer{

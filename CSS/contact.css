@@ -215,6 +215,23 @@ form button:hover {
   background: #0056b3;
 }
 
+.container-check{
+    display: flex;
+    justify-content: center;    
+    align-items: center; 
+    gap: 8px;  
+}
+
+.checkbox-container input {
+  margin: 0; 
+}
+
+#check-aceptar{
+    width: auto;
+    margin-bottom: 0;
+}
+
+
 
 
                     /* PRE-FOOTER */
@@ -231,6 +248,11 @@ form button:hover {
 .info-extra{
     display: grid;
     gap: 5px;
+}
+
+.info-extra h3{
+    margin-left: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -305,6 +327,10 @@ form button:hover {
     align-items: center;
     justify-content: center;
     gap: 5px;
+}
+
+.cont__tittleAccounts h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 

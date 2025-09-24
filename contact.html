@@ -49,46 +49,49 @@
         <section class="sect-formGLOBAL">
 
             <div class="tittle__contact">
-            <h1>Contactanos</h1>    
-        </div>
+                <h1>Te contactamos</h1>    
+            </div>
 
 
         <!-- FORMULARIO -->
-    <form action="#" method="">
+            <form action="#" method="">
 
-        <!-- Nombre -->
-        <input type="text" id="input__name" name="nombre" placeholder="Nombre" required>
-        <br><br>
+                <!-- Nombre -->
+                <input type="text" id="input__name" name="nombre" placeholder="Nombre" required>
+                <br><br>
 
-        <!-- Telefono -->
-        <input type="tel" name="tel" id="input__tel" placeholder="Teléfono (opcional)">
+                <!-- Telefono -->
+                <input type="tel" name="tel" id="input__tel" placeholder="Teléfono (opcional)">
 
-        <!-- Email -->
-        <input type="email" id="input__email" name="email" placeholder="Correo electrónico">
-        <br><br>
+                <!-- Email -->
+                <input type="email" id="input__email" name="email" placeholder="Correo electrónico">
+                <br><br>
 
-        <!-- Motivo Opciones -->
-         <label for="pais">Motivo del contacto</label>
-         <select id="pais" name="pais">
-            <option value="" disabled selected>-- Elegí una opción --</option>
-            <option value="consult">Consulta</option>
-            <option value="recl">Reclamo</option>
-            <option value="pm">Pedido Mayorista</option>
-            <option value="otr">Otros</option> 
-        </select>
-        <br><br>
+                <!-- Motivo Opciones -->
+                <label for="pais">Motivo del contacto</label>
+                <select id="pais" name="pais">
+                    <option value="" disabled selected>-- Elegí una opción --</option>
+                    <option value="consult">Consulta</option>
+                    <option value="recl">Reclamo</option>
+                    <option value="pm">Pedido Mayorista</option>
+                    <option value="otr">Otros</option> 
+                </select>
+                <br><br>
 
-        <!-- Comentario -->
-        <textarea id="comentarios" name="comentarios" rows="4" cols="30" placeholder="Comentarios"></textarea>
-        <br><br>
+                <!-- Comentario -->
+                <textarea id="comentarios" name="comentarios" rows="4" cols="30" placeholder="Comentarios"></textarea>
+                <br><br>
 
-        <!-- Términos y botón -->
-        <input type="checkbox" id="acepto" name="acepto" required>
-        <label for="acepto">Acepto los términos y condiciones</label>
-        <br><br>
-        <button type="submit">Enviar</button>
-        
-    </form>
+                <!-- Términos y botón -->
+                <div class="container-check">
+                    <input type="checkbox" id="check-aceptar" name="acepto" required>
+                    <label for="acepto" id="label-aceptar">Acepto los términos y condiciones</label>
+                </div>
+
+                <br><br>
+                <button type="submit">Enviar</button>
+                
+            </form>
 
         </section>
 
@@ -103,6 +106,7 @@
     <section class="sect-accRed">
 
         <section class="info-extra">
+            <h3>Contacto</h3>
                 <p>📞 +54 9 11 1234-5678</p>
                 <p>📍 Lanús, Buenos Aires</p>
                 <p>🕒 Lun a Vie: 10:00 - 18:00 hs</p>

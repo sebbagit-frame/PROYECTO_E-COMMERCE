@@ -123,7 +123,7 @@ p, h1, h2, h3, span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 0 150px 0;
+    padding: 50px 0 10px 0;
 }
 
 .logo-brucs{
@@ -146,33 +146,162 @@ p, h1, h2, h3, span{
 .sect__carrits-global{
     display: flex;
     justify-content: space-between;
-    padding: 50px;
-    border: 1px solid #fff;
-    margin: 80px;
-
+    padding: 50px 20px 200px 20px;
 }
 
 
 .container__img-caractBuzo>img{
-    width: 70vh;
+    width: 50vh;
 }
+
 
 
                 /* CARACTERÍSTICAS ITEMS - DESCRIP */
 
+.cont__products-pay-value{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 50px;
+}
+
+.sect__cart-items{
+    margin-left: 20px;
+}
+
+.cont__cart-item{
+    display: flex;
+    border: 1px solid #fff;
+    padding: 50px 10px 15px 30px;
+    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
+}
+
+.cont__cart-item img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.sect__item-info{
+    margin: 0 8px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 10vh;
+}
+
+.sect__item-info h2{
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.sect__item-info p{
+    font-size: 1.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn-remove{
+    height: 3vh;
+}
+
+
 .sect__text-descrip{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 50px 10px 50px 50px;
+    text-align: center;
+    justify-content: center;
+    
 }
 
 .sect__text-descrip ul{
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .sect__text-descrip ul li{
-
+    font-size: 1.2em;
 }
+
+.cont__item-actions{
+    display: flex;
+    gap: 0.5em;
+    margin-left: 15px;
+}
+
+.cont__item-actions span{
+    margin-top: 2px;
+}
+
+.cont__item-actions button{
+    height: 23px;
+    border: none;
+    border-radius: 8px;
+    padding: 4px;
+    background-color: #282828;
+    color: white;
+    cursor: pointer;
+}
+
+.cont__item-actions button:hover{
+    color: #282828;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+                /* ASIDE SUMARY */
+.container__aside-summary{
+    display: flex;
+    margin-left: 50px;
+    border: 1px solid #fff;
+    padding: 50px 10px 50px 30px;
+    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
+    width: 50vh;
+}
+
+.cart-summary{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.cart-summary p{
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hr__summary{
+    width: 80%;
+}
+
+
+.cont__checkout{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn_checkout{
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: white;
+    color: #0e0e0e;
+}
+
+.btn_checkout:hover{
+    background-color: #282828;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 
 
                    /* PRE-FOOTER */

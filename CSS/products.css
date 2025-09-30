@@ -299,6 +299,10 @@ main{
   transform: scale(1.05);
 }
 
+.container__button-carrito button:hover{
+    color: white;
+}
+
 .btn-add:active {
   background-color: #000; 
   transform: scale(0.98);
@@ -308,6 +312,11 @@ main{
   font-size: 20px; 
   margin-left: 8px; 
   color: inherit;
+}
+
+.link__carrito-buzo{
+    text-decoration: none;
+    color: black;
 }
 
 

@@ -183,7 +183,7 @@ main{
 
 .sect__products{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     flex-grow: 1;
     gap: 130px;
 }
@@ -244,10 +244,11 @@ main{
 
 
 .container__grid-columns__products-img{
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1fr;
     flex-grow: 1;
     margin-bottom: 100px;
+    padding: 120px;
 }
 
 

@@ -150,10 +150,6 @@ p, h1, h2, h3, span{
 }
 
 
-.container__img-caractBuzo>img{
-    width: 50vh;
-}
-
 
 
                 /* CARACTERÍSTICAS ITEMS - DESCRIP */
@@ -178,7 +174,7 @@ p, h1, h2, h3, span{
 }
 
 .cont__cart-item img{
-    width: 50%;
+    width: 50vh;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;

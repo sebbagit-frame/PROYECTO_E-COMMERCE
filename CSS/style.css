@@ -334,6 +334,11 @@ main{
     background: #0d0d0d;
 }
 
+.container__2sections{
+    display: flex;
+    gap: 400px;
+}
+
 .menu-list__footer{
     display: none;
 }
@@ -672,5 +677,6 @@ footer{
 
     .text-copyright, .textDef{
         font-size: 15px;
+        text-align: center;
     }
 }

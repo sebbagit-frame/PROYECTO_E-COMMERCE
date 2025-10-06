@@ -72,6 +72,14 @@ header{
     transition: 0.2s;
 }
 
+.menu-icon {
+    display: none; 
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+
                     /* CARRITO */
 
 .contaier__bi-cart4{
@@ -190,6 +198,15 @@ li{
     align-items: center;
     padding: 40px;
     background: #0d0d0d;
+}
+
+.container__2sections{
+    display: flex;
+    gap: 400px;
+}
+
+.menu-list__footer{
+    display: none;
 }
 
 

@@ -568,8 +568,10 @@ footer{
 
 @media (max-width: 768px){
 
-     html, body {
-        overflow-x: hidden;
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     /* HEADER */
@@ -750,6 +752,12 @@ footer{
                         /* ***RESPONSIVE 480*** */
 
 @media (max-width: 480px){
+
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
     
     .container__i-carrito{
         margin-left: 35px;

@@ -373,8 +373,10 @@ footer{
 
 @media (max-width: 768px){
 
-     html, body {
-        overflow-x: hidden;
+     header{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
     /* HEADER */

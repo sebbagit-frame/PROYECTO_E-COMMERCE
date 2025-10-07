@@ -460,12 +460,14 @@ footer{
                                 /* RESPONSIVE */
 @media (max-width: 768px){
 
-    html, body {
-        overflow-x: hidden;
-    }
-
 
     /* HEADER */
+
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 
     .header__container-ul{
         display: flex;
@@ -587,6 +589,14 @@ footer{
 
 
 @media (max-width: 480px){
+
+        /* HEADER */
+    
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
     
     .container__i-carrito{
         margin-left: 35px;

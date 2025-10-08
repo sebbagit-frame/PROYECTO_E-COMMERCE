@@ -59,7 +59,7 @@
                 </ul>
 
 
-            <h3>Filtros <i class="bi bi-filter"></i></h3>
+            <h3>Filtros <i class="bi bi-funnel"></i></h3>
             
                 <ul>
                     <li><a href="#">Hombre</a></li>
@@ -67,11 +67,11 @@
                 </ul>
 
 
-            <h3>Ordenar por <i class="bi bi-sort-numeric-down"></i></h3>
+            <h3>Ordenar por <i class="bi bi-sort-down"></i></h3>
                 <select>
-                    <option value="relevancia">Relevancia</option>
-                    <option value="precio-asc">Precio: más barato a más caro</option>
-                    <option value="precio-desc">Precio: más caro a más barato</option>
+                    <option value="relevancia">Más vendidos</option>
+                    <option value="precio-asc">Precio: Menor a Mayor</option>
+                    <option value="precio-desc">Precio: Mayor a Menor</option>
                 </select>
         </aside>
 
@@ -80,11 +80,50 @@
             
             <div class="container__flex__products-img">
                 
-                
-                
-                <div class="container__h1-products">
-                    <h1 class="tittle-products">Productos</h1>
-                </div>
+                <section class="sect__split-tittle_ref-site">
+
+                    <div class="container__ref-site">
+                        <p class="text-site">
+                            <a href="/index.html">Inicio</a>
+                        </p>
+                        <span class="ref-split">></span>
+                        <p class="text-site" id="text-site-active">Productos</p>
+                    </div>
+                    
+                    <div class="container__h1-products">
+                        <h1 class="tittle-products">Productos</h1>
+                    </div>
+                </section>
+
+
+                <section class="sect-filters-category">
+
+                    <div class="container-filter">
+                       <h3>Filtrar <i class="bi bi-funnel"></i></h3>
+
+                        <select>
+                            <option value="dis-sex" selected disabled>Género</option>
+                            <option value="filter-man">Hombre</option>
+                            <option value="filter-woman">Mujer</option>
+                        </select>
+                    </div>
+
+
+                    <div class="container-category">
+                        <h3>Ordenar por <i class="bi bi-sort-down"></i></h3>
+
+                        <select>
+                            <option value="relevancia">Más vendidos</option>
+                            <option value="precio-asc">Precio: Menor a Mayor</option>
+                            <option value="precio-desc">Precio: Mayor a Menor</option>
+                        </select>
+
+
+                    </div>
+
+                </section>
+
+
                 
                 <section class="sect__products">
 

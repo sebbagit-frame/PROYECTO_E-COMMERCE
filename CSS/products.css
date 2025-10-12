@@ -315,10 +315,10 @@ main{
 
 .container__grid-columns__products-img{
     display: flex;
+    justify-content: center;
     grid-template-columns: 1fr 1fr;
     flex-grow: 1;
     margin-bottom: 100px;
-    padding: 120px;
 }
 
 
@@ -547,7 +547,9 @@ p{
 }
 
 .cont__tittleAccounts{
+    text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0 10px 0 10px;
 }
 
 
@@ -915,4 +917,9 @@ footer{
         font-size: 15px;
         text-align: center;
     }
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* evita el scroll lateral */
 }

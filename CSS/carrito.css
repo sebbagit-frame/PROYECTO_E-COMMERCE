@@ -149,12 +149,20 @@ p, h1, h2, h3, span{
 }
 
 
+                /* TITULO GENERAL */
+.tittle-general{
+    text-align: center;
+    font-size: 3.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
 
                     /* PRODUCTO - CARRITO */
 .sect__carrits-global{
     display: flex;
     justify-content: space-between;
-    padding: 50px 20px 200px 20px;
+    padding: 50px 20px 150px 20px;
 }
 
 
@@ -176,16 +184,21 @@ p, h1, h2, h3, span{
 
 .cont__cart-item{
     display: flex;
-    border: 1px solid #fff;
-    padding: 50px 10px 15px 30px;
-    box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(108, 108, 108, 0.6);
+    padding: 25px 35px;
+    max-width: 1000px;
+    margin: 60px auto;
+    gap: 20px;
+    color: #fff;
 }
 
 .cont__cart-item img{
-    width: 50vh;
-    height: 100%;
-    object-fit: cover;
+    width: 200px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
 .sect__item-info{
@@ -202,8 +215,10 @@ p, h1, h2, h3, span{
 }
 
 .sect__item-info p{
-    font-size: 1.5em;
+    font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 .btn-remove{
@@ -212,23 +227,29 @@ p, h1, h2, h3, span{
 
 
 .sect__text-descrip{
+    flex: 1;
     display: flex;
     flex-direction: column;
     padding: 50px 10px 50px 50px;
     text-align: center;
     justify-content: center;
-    
+    gap: 8px;
+}
+
+.sect__text-descrip h2{
+    font-size: 2em;
+    margin: 0;
 }
 
 .sect__text-descrip ul{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    font-size: 14px;
+    margin-left: 20px;
+    color: #ccc;
 }
 
 .sect__text-descrip ul li{
     font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .cont__item-actions{
@@ -262,8 +283,7 @@ p, h1, h2, h3, span{
 .container__aside-summary{
     display: flex;
     margin-left: 50px;
-    border: 1px solid #fff;
-    padding: 50px 10px 50px 30px;
+    padding: 50px 30px 50px 30px;
     box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
     width: 50vh;
 }
@@ -278,10 +298,19 @@ p, h1, h2, h3, span{
 .cart-summary p{
     font-size: 1.2em;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.cart-summary h2{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
 }
 
 .hr__summary{
-    width: 80%;
+    width: 100%;
 }
 
 

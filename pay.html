@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRUCS ® - Finalizar Compra</title>
 
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/pay.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 <body>
@@ -45,9 +45,59 @@
 
     <main>
 
-        <h1>Finaliza tu compra</h1>
+        <h1 class="tittle-principal">Finaliza tu compra</h1>
 
-    </main>
+        <section class="checkout">
+
+            <h2>Detalles de facturación</h2>
+
+         <form class="checkout__form">
+
+            <div class="form__group">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+            </div>
+
+            <div class="form__group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="juan@mail.com" required>
+            </div>
+
+            <div class="form__group">
+                <label for="direccion">Dirección de entrega</label>
+                <input type="text" id="direccion" name="direccion" placeholder="Av. Rivadavia 1234" required>
+            </div>
+
+            <div class="form__group">
+                <label for="provincia">Provincia</label>
+                <input type="text" id="provincia" name="provincia" placeholder="Buenos Aires" required>
+            </div>
+
+            <div class="form__group">
+                <label for="codigo">Código Postal</label>
+                <input type="text" id="codigo" name="codigo" placeholder="1824" required>
+            </div>
+
+            <div class="form__group">
+                <label for="metodo-pago">Método de pago</label>
+                <select id="metodo-pago" name="metodo-pago" required>
+                    <option value="">Seleccioná una opción</option>
+                    <option value="tarjeta">Tarjeta de crédito / débito</option>
+                    <option value="transferencia">Transferencia bancaria</option>
+                    <option value="mercado-pago">Mercado Pago</option>
+                </select>
+            </div>
+
+            <div class="form__group">
+                <label for="comentarios">Comentarios adicionales</label>
+                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Entregar entre las 14 y 18hs"></textarea>
+            </div>
+
+            <button type="submit" class="btn__checkout">Confirmar compra</button>
+        </form>
+    </section>
+
+</main>
 
 
 

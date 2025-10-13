@@ -55,9 +55,7 @@ header{
 
 #a__link--active{
     color: rgb(57, 57, 57);
-    border-bottom: 1px solid rgb(211,   211, 211);
     padding-bottom: 5px;
-    border-top: 1px solid rgb(211, 211, 211);
     padding-top: 5px;
 }
 
@@ -78,7 +76,52 @@ header{
 
 
 
+                    /* CARRITO */
+
+.contaier__bi-cart4{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    height: 37px;
+}
+
+.container__i-carrito{
+    display: flex;
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.contaier__bi-cart4 i{
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+}
+
+.container__i-carrito{
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.header__container-ul i:hover{
+    color: rgb(57, 57, 57);
+    transition: 0.2s;
+}
+
+
+
                     /* MAIN */
+
+.container__forms{
+    display: flex;
+    justify-content: center;
+    gap: 10em;
+    align-items: center;
+}
+
+
 .tittle-principal{
     display: flex;
     justify-content: flex-start;
@@ -87,17 +130,40 @@ header{
     padding: 20px;
     margin-top: 20px;
     font-size: 2em;
+    gap: 20px;
 }
 
-.checkout {
-  background-color: #ffffff;
-  color: #111111;
-  max-width: 600px;
-  margin: 3rem auto;
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.648);
-  font-family: 'Poppins', sans-serif;
+.icon-back{
+    list-style-type: none;
+    color: white;
+    background-color: #1a1a1a;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.icon-back:hover{
+    color: black;
+    background: none;
+    transition: 0.3s;
+}
+
+.checkout, .checkout-pay {
+    display: flex;
+    gap: 10em;
+    align-items: center;
+    background-color: #ffffff;
+    color: #111111;
+    width: auto;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.648);
+    font-family: 'Poppins', sans-serif;
+}
+
+.checkout-pay{
+    display: flex;
+    flex-direction: column;
 }
 
 .checkout h2 {
@@ -147,20 +213,21 @@ header{
 }
 
 .btn__checkout {
-  background: linear-gradient(90deg, #151515, #707070);
-  color: #ffffff;
-  font-weight: 600;
-  padding: 1rem;
-  border-radius: 8px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(90deg, #151515, #707070);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn__checkout:hover {
-  background: linear-gradient(90deg, #707070, #151515);
-  transform: scale(1.02);
+    color: #ccc;
+    background: linear-gradient(90deg, #707070, #151515);
+    transform: scale(1.02);
 }
 
 

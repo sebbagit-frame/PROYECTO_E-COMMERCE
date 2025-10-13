@@ -45,11 +45,24 @@
 
     <main>
 
-        <h1 class="tittle-principal">Finaliza tu compra</h1>
+    <div class="container__sect-back__tittle">
 
-        <section class="checkout">
+        <h1 class="tittle-principal">
+            <a href="carrito.html" class="icon-back">
+                <i class="bi bi-arrow-return-left"></i>
+            </a>
 
-            <h2>Detalles de facturación</h2>
+            Finaliza tu compra</h1>
+
+    </div>        
+
+    <div class="container__forms">
+
+     <section class="checkout">
+
+            <div class="container__checkout-detail">
+
+                <h2>Detalles de facturación</h2>
 
          <form class="checkout__form">
 
@@ -60,7 +73,7 @@
 
             <div class="form__group">
                 <label for="email">Correo electrónico</label>
-                <input type="email" id="email" name="email" placeholder="juan@mail.com" required>
+                <input type="email" id="email" name="email" placeholder="juan@gmail.com" required>
             </div>
 
             <div class="form__group">
@@ -79,6 +92,27 @@
             </div>
 
             <div class="form__group">
+                <label for="comentarios">Comentarios adicionales</label>
+                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Entregar entre las 14 y 18hs"></textarea>
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <div class="container__checkout-pay">
+
+        <h2>Método de pago</h2>
+
+        <form class="checkout__form">
+
+            <div class="form__group">
+                <label for="codigo">Número de tarjeta</label>
+                <input type="text" id="codigo" name="codigo" placeholder="0000 0000 0000 0000" required>
+            </div>
+
+            <div class="form__group">
                 <label for="metodo-pago">Método de pago</label>
                 <select id="metodo-pago" name="metodo-pago" required>
                     <option value="">Seleccioná una opción</option>
@@ -89,13 +123,20 @@
             </div>
 
             <div class="form__group">
-                <label for="comentarios">Comentarios adicionales</label>
-                <textarea id="comentarios" name="comentarios" rows="3" placeholder="Entregar entre las 14 y 18hs"></textarea>
+                <label for="codigo">CCV</label>
+                <input type="text" id="cod-tj" name="cod-tj" placeholder="xxx" required>
             </div>
 
             <button type="submit" class="btn__checkout">Confirmar compra</button>
         </form>
+
+     </div>
+
     </section>
+
+    
+
+    </div>
 
 </main>
 

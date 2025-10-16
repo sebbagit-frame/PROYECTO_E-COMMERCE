@@ -48,17 +48,23 @@
     </header>
 
 
-    <main>
+    <main class="main">
+
+        <section class="sect__change-color">
+
+            <button id="btn-changec">Cambiar a Light Mode</button>
+
+        </section>
 
         <section class="sect-formGLOBAL">
 
             <div class="tittle__contact">
-                <h1>Te contactamos</h1>    
+                <h1 class="tittle-cont">Te contactamos</h1>    
             </div>
 
 
         <!-- FORMULARIO -->
-            <form action="#" method="">
+            <form action="#" class="class-form" id="contact-form" method="">
 
                 <!-- Nombre -->
                 <input type="text" id="input__name" name="nombre" placeholder="Nombre" required>
@@ -93,7 +99,7 @@
                 </div>
 
                 <br><br>
-                <button type="submit">Enviar</button>
+                <button type="submit" id="btn-send">Enviar</button>
                 
             </form>
 
@@ -220,4 +226,6 @@
     </footer>
 
 </body>
+
+<script src="/JS/contact.js"></script>
 </html>

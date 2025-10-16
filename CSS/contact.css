@@ -369,6 +369,30 @@ footer{
 }
 
 
+
+.light-mode{
+    background-color: white;
+    color: black;
+}
+
+.sect__change-color{
+    padding: 1em 0 0 1em;
+}
+
+#btn-changec{
+    padding: 0.30em;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#btn-changec:hover{
+    cursor: pointer;
+}
+
+
                            /* RESPONSIVE */
 
 @media (max-width: 768px){

@@ -1,4 +1,7 @@
+/* LETTERS */
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 *{
     margin: 0;
@@ -77,6 +80,8 @@ header{
     font-size: 1.8rem;
     cursor: pointer;
 }
+
+
 
 
 
@@ -178,16 +183,25 @@ p{
     padding: 40px;
 }
 
-.subcont__hp__flex h1{
+.tittle__who{
     font-size: 5em;
-    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
 }
 
 .text__who{
     display: flex;
     font-size: 1.5em;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.text__who span {
+  margin: 0 0 0 0.4em;
+  font-family: italic;
+  font-weight: 800;
 }
 
 .sec__2da__display-flex__limit__mp__eleg{
@@ -207,21 +221,24 @@ p{
     padding: 40px;
     border-radius: 12px;
     gap: 10px;
-    
 }
+
 
 .tittle__2da__display-flex__limit__mp__eleg{
     font-size: 2em;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
 .textp__2da__display-flex__limit__mp__eleg{
-    font-size: 1em;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1em;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
 }
-             
+                
 .bi{
-    font-size: 1em;
+    font-size: 1.6em;
 }
 
 
@@ -247,12 +264,14 @@ p{
 
 .tittle__who2{
     font-size: 5em;
-    font-family:  'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
 }
 
 .text__who2{
     font-size: 1.5em;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
 }
 
                     /* PRE-FOOTER */
@@ -387,13 +406,13 @@ footer{
 
 @media (max-width: 768px){
 
-     header{
+    *** /* HEADER */ ***
+
+    header{
         position: sticky;
         top: 0;
         z-index: 1000;
     }
-
-    /* HEADER */
 
     .header__container-ul{
         display: flex;
@@ -422,7 +441,70 @@ footer{
     }
 
 
-    /* PRE-FOOTER */
+    /* *** MAIN *** */
+
+
+    /* PRIMERA SECCION */
+    .section__who__sect-1, .text__who{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .tittle__who{
+        display: flex;
+        text-align: center;
+        font-size: 3.5em;
+        margin-bottom: 1.5rem;
+    }
+
+    .text__who em{
+        margin: 0;
+    }
+    
+    .cont__img__who__right img{
+        width: 80%;
+        border-radius: 10px;
+    }
+    
+
+    /* MP ELEG */
+
+    .sec__2da__display-flex__limit__mp__eleg{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+
+
+    /* SEGUNDA SECCIÓN */
+
+    .cont__who__global2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cont__img__who__flex2 img{
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .tittle__who2{
+        display: flex;
+        text-align: center;
+        font-size: 3.5em;
+        margin-bottom: 1.5rem;
+    }
+
+
+
+
+    *** /* PRE-FOOTER */ ***
 
     .sect-accRed{
         flex-direction: column;
@@ -437,6 +519,10 @@ footer{
 
     .newsletter{
         flex-direction: column;
+    }
+
+    .cont__tittleAccounts h3{
+        text-align: center;
     }
 
     .sect__info-news-nav{
@@ -523,57 +609,37 @@ footer{
 
 
 
-    /* SECCIÓN IMAGEN-H1-TEXT */
+    /* MAIN */
 
+    /* PRIMERA SECCION */
 
-    .container__info__img{
+    .tittle__who{
+        font-size: 2.5em;
+    }
+
+    .text__who{
         display: flex;
-        flex-direction: column-reverse;
+        font-size: 1.5em;
     }
-
-
-            /* MANGA */
 
     
-    .info-item__manga, .info-item__cost{
-        width: 100%;
-        height: auto;
-    }
-            
-    .tittle__IMG-mang-cost{
-        font-size: 20px;
+    /* SEGUNDA SECCION */
+
+    .cont__img__who__flex2 img{
+        width: 80%;
     }
 
-    .text__IMG-mang-cost{
-        font-size: 16px;
+    .tittle__who2{
+        font-size: 2.5em;
     }
 
-
-    
-    /* TITULO-VIDEO */
-
-    .tittle-h2__vid{
-        font-size: 25px;
-    }
-
-    .cont-vidyt video {
-        width: 100%;
-        height: auto;
+    .text__who2{
+        display: flex;
+        font-size: 1.5em;
     }
 
 
-    .tittle-dis{
-        font-size: 25px;
-    }
-
-    .text-dis{
-        font-size: 16px;
-    }
-
-
-
-
-            /* PRE-FOOTER */
+             /* PRE-FOOTER */
 
     .menu-list__footer{
         text-align: center;
@@ -583,7 +649,11 @@ footer{
         text-align: center;
     }
 
-
+    .sect-accRed{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
 
     .container__h3-p__desc-susc__newsletter{
         text-align: center;
@@ -602,4 +672,9 @@ footer{
         font-size: 15px;
         text-align: center;
     }
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
 }

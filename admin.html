@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRUCS ® - Panel Admin</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-content">
+            
+            <a href="/index.html">
+                <img src="IMG/logos/BRUCS_logoR.webp" class="logo-admin" alt="BRUCS Logo">
+            </a>
+
+            <div>
+                <h1>PANEL DE ADMINISTRACIÓN</h1>
+                <p>GESTIÓN DE PRODUCTOS</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="tabs">
+            <button class="tab active" data-tab="productos">
+                <i class="bi bi-grid-3x3-gap-fill"></i> VER PRODUCTOS
+            </button>
+            <button class="tab" data-tab="agregar">
+                <i class="bi bi-plus-circle-fill"></i> AGREGAR PRODUCTO
+            </button>
+        </div>
+
+        <!-- msj -->
+        <div class="mensaje" id="mensaje"></div>
+
+
+
+        <!-- ver products -->
+        <div class="tab-content active" id="productos">
+            <section class="loading" id="loading">
+                <p><i class="bi bi-arrow-clockwise" style="animation: spin 1s linear infinite;"></i>
+                Cargando productos...</p>
+            </section>
+            <div class="productos-grid" id="productosGrid"></div>
+        </div>
+
+
+
+
+
+        <!-- add products -->
+        <div class="tab-content" id="agregar">
+            <div class="form-container">
+
+                <h2 class="form-title">AGREGAR NUEVO PRODUCTO</h2>
+
+                <form id="formAgregar">
+                    <div class="form-group">
+                        <label>NOMBRE DEL PRODUCTO</label>
+                        <input type="text" id="nombre" required placeholder="Ej: Buzo de algodón suave con capucha">
+                    </div>
+
+                    <div class="form-group">
+                        <label>PRECIO</label>
+                        <input type="number" id="precio" required placeholder="44999">
+                    </div>
+
+                    <div class="form-group">
+                        <label>CATEGORÍA</label>
+                        <select id="categoria" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Buzos">Buzos</option>
+                            <option value="Remeras">Remeras</option>
+                            <option value="Puperas">Puperas</option>
+                            <option value="Pantalones">Pantalones</option>
+                            <option value="Gorras">Gorras</option>
+                            <option value="Zapatillas">Zapatillas</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>GÉNERO</label>
+                        <select id="genero" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="Unisex">Unisex</option>
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>URL DE LA IMAGEN</label>
+                        <input type="url" id="imagen" required placeholder="http://127.0.0.1:5500/IMG/productos/...">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-circle-fill"></i> AGREGAR PRODUCTO
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+    </div> <!-- fin class container -->
+
+    
+
+    <!-- MODAL EDITAR -->
+    <div class="modal" id="modalEditar">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2>EDITAR PRODUCTO</h2>
+                <button class="close-modal" onclick="cerrarModal()">×</button>
+            </div>
+
+            <form id="formEditar">
+                <input type="hidden" id="editId">
+                
+                <div class="form-group">
+                    <label>NOMBRE DEL PRODUCTO</label>
+                    <input type="text" id="editNombre" required>
+                </div>
+
+                <div class="form-group">
+                    <label>PRECIO</label>
+                    <input type="number" id="editPrecio" required>
+                </div>
+
+                <div class="form-group">
+                    <label>CATEGORÍA</label>
+                    <select id="editCategoria" required>
+                        <option value="Buzos">Buzos</option>
+                        <option value="Remeras">Remeras</option>
+                        <option value="Puperas">Puperas</option>
+                        <option value="Pantalones">Pantalones</option>
+                        <option value="Gorras">Gorras</option>
+                        <option value="Zapatillas">Zapatillas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>GÉNERO</label>
+                    <select id="editGenero" required>
+                        <option value="Unisex">Unisex</option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>URL DE LA IMAGEN</label>
+                    <input type="url" id="editImagen" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <i class="bi bi-save-fill"></i> GUARDAR CAMBIOS
+                </button>
+            </form>
+
+        </div>
+    </div>
+
+    
+    <script src="JS/admin.js"></script>
+    <script src="JS/env.js"></script>
+</body>
+</html>

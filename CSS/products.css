@@ -211,7 +211,7 @@ main{
   background-color: #0f0f0f; 
   border-radius: 15px;
   padding: 1rem;
-  width: 280px; 
+  width: 16em; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,7 +224,6 @@ main{
   height: 200px;
   object-fit: cover; 
   border-radius: 10px;
-  margin-bottom: 1rem;
 }
 
 .sect__tittle-price-caract__products {
@@ -242,7 +241,6 @@ main{
 
 .product-value {
   font-weight: bold;
-  margin-bottom: 1rem;
 }
 
 .container__button-carrito {
@@ -282,6 +280,14 @@ main{
     box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
 }
 
+.container__img-products a{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    height: 100%;
+}
+
 
                     /* PRODUCTOS */
 
@@ -304,7 +310,6 @@ main{
 
 .gorraBrucs-product{
     border-radius: 20px;
-    margin-top: 30px;
 }
 
 .buzBrucs-product{

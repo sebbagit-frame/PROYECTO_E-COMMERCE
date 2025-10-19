@@ -232,6 +232,7 @@ main{
 
 .text-name__product {
   font-size: 1rem;
+  margin-top: 1em;
 }
 
 .sect__tittle-price-caract__products p {
@@ -243,7 +244,13 @@ main{
   font-weight: bold;
 }
 
-.container__button-carrito {
+.sect-cuotas{
+    p{
+        font-family: 'Times New Roman', Times, serif;
+    }
+}
+
+/* .container__button-carrito {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -271,7 +278,7 @@ main{
 
 .btn-add i {
   margin-left: 6px;
-}
+} */
 
 
 .container__img-products:hover{

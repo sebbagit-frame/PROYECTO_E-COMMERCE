@@ -315,6 +315,12 @@ p, h1, h2, h3, span{
     margin-top: 2em;
 }
 
+.sect-tabla-talles h3{
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
 .tabla-talles {
     width: 100%;
     border-collapse: collapse;

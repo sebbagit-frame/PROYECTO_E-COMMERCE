@@ -67,19 +67,30 @@
 
                     <img src="IMG/clothe/REN..png" class="product_buzo-clothe" alt="Características buzo">
                 
-                    <section class="sect__item-info">
-                        <p>$42.300</p>
-                        
-                        <div class="cont__item-actions">
-                            <button>-</button>
-                            <span>1</span>
-                            <button>+</button>
-                        </div>
-                    </section>
-                
                     <section class="sect__text-descrip">
                         <h2>Buzo BRUCS</h2>
                     </section>
+
+                    <div class="container-flex-price-cant-delete">
+                        <section class="sect__item-info">
+                            <p>$42.300</p>
+                            
+                            <div class="cont__item-actions">
+                                <!-- <button>-</button>
+                                <span>1</span>
+                                <button>+</button> -->
+                                <div class="cantidad-control">
+                                    <button class="btn-cantidad" aria-label="Disminuir cantidad">-</button>
+                                    <input type="number" class="input-cantidad" value="1" min="1" max="10" readonly>
+                                    <button class="btn-cantidad" aria-label="Aumentar cantidad">+</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="sect__icon-delete">
+                            <button class="btn-delete-product"> <i class="bi bi-trash"></i> </button>
+                        </section>
+                    </div>
 
                 </div>
                 

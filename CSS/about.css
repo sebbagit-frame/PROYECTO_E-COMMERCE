@@ -638,6 +638,33 @@ footer{
         font-size: 1.5em;
     }
 
+
+    /* BLOQUES */
+
+    .sec__2da__display-flex__limit__mp__eleg{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0;
+    }
+
+    .bloque{
+        margin: 0;
+        padding: 0.75em;
+    }
+
+    .bloque i{
+        font-size: 1.4rem;
+    }
+
+    .bloque h2{
+        font-size: 1.5rem;
+    }
+
+    .bloque p{
+        font-size: 1.1rem;
+    }
+
     
     /* SEGUNDA SECCION */
 
@@ -661,8 +688,14 @@ footer{
         max-height: 20em;
         overflow-y: auto;
         padding-right: 10px;
-    }
 
+        max-height: 30em;
+        overflow-y: auto;
+        padding-right: 10px;
+        
+        scrollbar-width: thin;
+        scrollbar-color: #444 #1a1a1a;
+    }
 
              /* PRE-FOOTER */
 

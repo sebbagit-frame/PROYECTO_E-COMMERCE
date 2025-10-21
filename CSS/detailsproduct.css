@@ -133,7 +133,7 @@ p, h1, h2, h3, span{
 
 .sect-img{
     display: inline-block;
-    height: 48.9em;
+    height: 100%;
 }
 
 .sect-img img{
@@ -577,14 +577,17 @@ footer{
     }
 
     .sect-img{
-        height: 20em;
-        padding: 1em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
     }
 
     .sect-descrip h1{
         display: flex;
         flex-direction: left;
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
 
     .container-price h3{
@@ -617,6 +620,7 @@ footer{
 
     .descripcion-section-info ul{
         display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
@@ -690,14 +694,6 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
-    }
-
-    .sect-img{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 2em;
     }
     
 

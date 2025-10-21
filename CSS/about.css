@@ -241,6 +241,11 @@ p{
     font-size: 1.6em;
 }
 
+.cont__img__who__right img{
+    width: 50em;
+    border-radius: 2em;
+}
+
 
                         /* SECCION 2 IMG */
 .img__who2{
@@ -611,7 +616,18 @@ footer{
 
     /* MAIN */
 
+    .container-name__brucs{
+        padding: 0;
+        padding-top: 5em;
+    }
+
+
+
     /* PRIMERA SECCION */
+
+    .cont__img__who__right img{
+        width: 100%;
+    }
 
     .tittle__who{
         font-size: 2.5em;
@@ -636,6 +652,15 @@ footer{
     .text__who2{
         display: flex;
         font-size: 1.5em;
+    }
+
+    .container-scroll-responsive{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-height: 20em;
+        overflow-y: auto;
+        padding-right: 10px;
     }
 
 

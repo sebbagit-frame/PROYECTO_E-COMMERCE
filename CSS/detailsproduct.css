@@ -128,11 +128,19 @@ p, h1, h2, h3, span{
 .sect__global-flex{
     display: flex;
     gap: 5em;
+    justify-content: center;
+}
+
+.sect-img{
+    display: inline-block;
+    height: 48.9em;
 }
 
 .sect-img img{
     border-radius: 20px;
     mask-image: linear-gradient(black 90%, transparent);
+    display: block;
+    width: 30rem;
 }
 
 
@@ -174,11 +182,11 @@ p, h1, h2, h3, span{
 
                     /* CONTENEDOR CUOTAS */
 .container-quotas p{
-    color: #282828;
+    color: #acacac;
 }
 
 .container-quotas p strong{
-    color: #666;
+    color: #f4f4f4;
 }
 
 
@@ -302,6 +310,36 @@ p, h1, h2, h3, span{
 }
 
 
+                /* TABLA TALLES */
+.sect-tabla-talles {
+    margin-top: 2em;
+}
+
+.tabla-talles {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1em;
+    background-color: #111;
+}
+
+.tabla-talles th {
+    background-color: #222;
+    color: white;
+    padding: 1em;
+    text-align: left;
+    border: 1px solid #333;
+}
+
+.tabla-talles td {
+    padding: 0.8em 1em;
+    color: #ccc;
+    border: 1px solid #333;
+}
+
+.tabla-talles tr:hover {
+    background-color: #1a1a1a;
+}
+
 
                     /* BOTON CARRITO */
 .sect-carrito {
@@ -333,7 +371,10 @@ p, h1, h2, h3, span{
 }
 
 
-
+            /* TABLA TALLES RESPONSIVE */
+.sect-tabla-talles-responsive{
+    display: none;
+}
 
                    /* PRE-FOOTER */
 .sect-accRed{
@@ -535,6 +576,112 @@ footer{
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
+    .sect-img{
+        height: 20em;
+        padding: 1em;
+    }
+
+    .sect-descrip h1{
+        display: flex;
+        flex-direction: left;
+        font-size: 1.5em;
+    }
+
+    .container-price h3{
+        display: flex;
+        flex-direction: left;
+        font-size: 1.5em;
+    }
+
+    .container-quotas p{
+        display: flex;
+        flex-direction: left;
+        strong{
+            margin-left: 0.25em;
+        }
+    }
+
+    .sect-descrip{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sect-descrip ul{
+        list-style-type: none;
+    }
+
+    .descripcion-section-infoEC{
+        display: flex;
+    }
+
+    .descripcion-section-info ul{
+        display: flex;
+        align-items: center;
+    }
+
+    .sect-sizes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 1em;
+    }
+
+    .sect-sizes h3{
+        font-size: 1rem;
+    }
+
+    .container-sizes{
+        margin: 0;
+    }
+
+    .container-sizes button{
+        font-size: 0.85rem;
+    }
+
+    .sect-tabla-talles{
+        display: none;
+    }
+
+    .btn-carrito{
+        padding: 0.85em;
+        font-size: 1.02rem;
+    }
+
+    .sect-tabla-talles-responsive{
+        display: table-column;
+    }
+
+    .sect-tabla-talles-responsive {
+        margin-top: 2em;
+    }
+
+    .sect-tabla-talles-responsive {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1em;
+        background-color: #111;
+    }
+
+    .sect-tabla-talles-responsive th {
+        background-color: #222;
+        color: white;
+        padding: 1em;
+        text-align: left;
+        border: 1px solid #333;
+    }
+
+    .sect-tabla-talles-responsive td {
+        padding: 0.8em 1em;
+        color: #ccc;
+        border: 1px solid #333;
+    }
+
+    .sect-tabla-talles-responsive tr:hover {
+        background-color: #1a1a1a;
+    }
+
     .divider-span{
         color: #1a1a1a;
     }
@@ -542,11 +689,15 @@ footer{
     .sect__global-flex{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
 
     .sect-img{
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
     }
     
 

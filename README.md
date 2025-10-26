@@ -1,4 +1,4 @@
 # PROYECTO E-COMMERCE
 
-Catálogo interno, herramienta para que los empleados donde puedan consultar datos de manera ágil y rápida en cualquier momento y lugar, mejorando así la comunicación, la toma de decisiones y la productividad
-El objetivo organizar y localizar información sobre productos, servicios o documentos dentro de una empresa o institución de manera eficiente y accesible
+Proyecto académico desarrollado para la facultad utilizando HTML, CSS y JS.
+El objetivo es crear un sitio web de tipo e-commerce, aplicando conceptos de maquetado, estructura, estilos, funciones interactivas y dinámicas, permitiendo que respondan a las acciones del usuario en tiempo real.

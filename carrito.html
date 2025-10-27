@@ -73,7 +73,7 @@
 
                     <div class="container-flex-price-cant-delete">
                         <section class="sect__item-info">
-                            <p>$42.300</p>
+                            <p class="precio-producto">$42.300</p>
                             
                             <div class="cont__item-actions">
                                 <!-- <button>-</button>
@@ -98,11 +98,11 @@
 
        <div class="container__aside-summary">
            <aside class="cart-summary">
-               <p>Subtotal: <span>$42.300</span></p>
+               <p class="precio-subtotal">Subtotal: <span>$42.300</span></p>
                <hr class="hr__summary">
                <p>Envío: <span>$2.000</span></p>
                <hr class="hr__summary">
-               <h2>Total: <span>$44.300</span></h2>
+               <h2 class="precio-total">Total: <span>$44.300</span></h2>
                
                <div class="cont__checkout">
 
@@ -121,9 +121,21 @@
 
     </section>
 
-    </main>
 
 
+
+    <div class="container-paginaweb" style="padding: 2em; display: grid; gap: 1em;">
+        <h1 class="titulo-paginaweb">Mi pagina web</h1>
+        
+        <p id="miParrafo" style="width: 10%;">¡Hola! Soy un párrafo.</p>
+        
+        <section class="sect-btn" style="display: flex; gap: 1em;">
+            <button onclick="cambiarTexto()" style="width: 10%; padding: 0.2em;">Cambiar Texto</button>
+            <button onclick="cambiarFondo()" style="width: 10%; padding: 0.2em;">Cambiar color fondo</button>
+            <button onclick="cambiarColor()" style="width: 10%; padding: 0.2em;">Cambiar color</button>
+            <button onclick="cambiarColorFondo()" style="width: 10%; padding: 0.2em;">Cambiar color y fondo</button>
+        </section>
+    </div>
 
 
 

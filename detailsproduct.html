@@ -215,11 +215,16 @@
                             <h3>Seleccioná tu talle:</h3>
                             
                             <div class="container-sizes">
-                                <button class="btn-sizes">S</button>
-                                <button class="btn-sizes">M</button>
-                                <button class="btn-sizes">L</button>
-                                <button class="btn-sizes">XL</button>
+                                <button onclick="clickTalle_S()" class="btn-sizes">S</button>
+                                <button onclick="clickTalle_M()" class="btn-sizes">M</button>
+                                <button onclick="clickTalle_L()" class="btn-sizes">L</button>
+                                <button onclick="clickTalle_XL()" class="btn-sizes">XL</button>
 
+                            </div>
+
+                            <div class="container-eleg" style="padding: 1em;">
+                                <h3>Elegido:</h3>
+                                <p id="text-abajo"></p>
                             </div>
                     </section>
 
@@ -356,4 +361,6 @@
     </footer>
     
 </body>
+
+<script src="/JS/detailsprod.js"></script>
 </html>

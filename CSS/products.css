@@ -451,6 +451,29 @@ p{
     font-family: 'Courier New', Courier, monospace;
 }
 
+
+
+
+                /* MENU-RESPONSIVE */
+.menu-active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: linear-gradient(to bottom, #1a1a1a, #000000);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    gap: 20px;
+}
+
+
+
+
+
+
+
                     /* PRE-FOOTER */
 .sect-accRed{
     display: flex;

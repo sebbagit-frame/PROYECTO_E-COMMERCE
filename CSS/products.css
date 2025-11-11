@@ -128,7 +128,7 @@ aside{
     padding: 15px;
     border-radius: 10px;
     margin-right: 70px;
-    height: 70vh;
+    height: fit-content;
     box-shadow: 0 4px 15px rgba(108, 108, 108, 0.6);
 }
 
@@ -153,16 +153,39 @@ aside h3{
 }
 
 aside a:hover{
-    color: #f4f4f4;
+    color: #f4f4f4 !important;
     transition: 0.3s;
 }
 
 aside select{
     background-color: #0e0e0e;
     color: white;
-    padding: 8px;
+    padding: 0.75em;
+    margin-bottom: 1em;
     border-radius: 10px;
     border-color: #f4f4f4;
+}
+
+.container-button-ver-todos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+aside button{
+    border: none;
+    border-radius: 2em;
+    padding: 0.55em;
+    width: 8em;
+    color: #f4f4f4;
+    background-color: #1a1a1a;
+    cursor: pointer;
+}
+
+aside button:hover{
+    color: #1a1a1a;
+    background-color: #f4f4f4;
+    transition: 0.3s;
 }
 
 main{

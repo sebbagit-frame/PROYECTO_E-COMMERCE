@@ -1,5 +1,5 @@
 // ============================================
-//  PRODUCTOS - ESTRUCTURA DE DATOS
+//  PRODUCTOS
 // ============================================
 
 const productos = [
@@ -114,6 +114,16 @@ const productos = [
         cuotas: 3,
         valorCuota: 6100
     },
+    {
+        id: 12,
+        nombre: "Gorra Cap GOOD, ajustable.",
+        precio: 31200,
+        categoria: "Gorras",
+        genero: "Unisex",
+        imagen: "IMG/productos/gorras/gorra_cap-good.png",
+        cuotas: 3,
+        valorCuota: 10400
+    }
 ];
 
 
@@ -141,12 +151,60 @@ function renderizarProductos(arrayProductos) {
         
         contenedor.innerHTML += productoHTML;
     });
-}
+};
 
 renderizarProductos(productos);
 
+
+
 // ============================================
-//  ICÓNO RESPONSIVE
+//  FILTROS
+// ============================================
+
+const categLink = document.querySelectorAll('aside ul li a');
+const selectOrdenar = document.querySelector('aside select');
+const btn_tosee = document.querySelector('aside div #btn-ver-todos');
+
+// agregar evento a botón de "ver todos" para cambiar de color
+
+
+categLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        
+
+        categLink.forEach(l => l.style.color = "#7777");
+        link.style.color = "white";
+        const categClick = link.innerHTML;
+    
+        const productosFiltrs = productos.filter(producto => {
+            return producto.categoria === categClick;
+        });
+            
+        const contenedor = document.querySelector('.sect__products');
+        contenedor.innerHTML = '';
+        
+        renderizarProductos(productosFiltrs);
+
+    });
+});
+
+const btnVerTodos = document.getElementById('btn-ver-todos');
+
+btnVerTodos.addEventListener('click', () => {
+    const contenedor = document.querySelector('.sect__products');
+    contenedor.innerHTML = '';
+    renderizarProductos(productos);
+});
+
+
+
+
+
+
+// ============================================
+//  ICONO RESPONSIVE
 // ============================================
 
 const menuIcon = document.querySelector(".menu-icon");

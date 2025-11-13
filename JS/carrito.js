@@ -164,7 +164,6 @@ mostrarProductos();
 
 // func: actualizar el contador del carrito
 function actualizarContador() {
-    // contar total de productos
     let totalProductos = 0;
     
     carrito.forEach(producto => {
@@ -202,32 +201,31 @@ function actualizarContador() {
 }
 
 
-// En la función sumarCantidad
+// en la función sumarCantidad
 function sumarCantidad(index) {
     carrito[index].cantidad = carrito[index].cantidad + 1;
     localStorage.setItem('carrito', JSON.stringify(carrito));
     mostrarProductos();
-    actualizarContador(); // ← AGREGAR
+    actualizarContador(); 
 }
 
-// En la función restarCantidad
+// en la función restarCantidad
 function restarCantidad(index) {
     if (carrito[index].cantidad > 1) {
         carrito[index].cantidad = carrito[index].cantidad - 1;
         localStorage.setItem('carrito', JSON.stringify(carrito));
         mostrarProductos();
-        actualizarContador(); // ← AGREGAR
+        actualizarContador(); 
     }
 }
 
-// En la función eliminarProducto
+// en la función eliminarProducto
 function eliminarProducto(index) {
     carrito.splice(index, 1);
     localStorage.setItem('carrito', JSON.stringify(carrito));
     mostrarProductos();
-    actualizarContador(); // ← AGREGAR
+    actualizarContador(); 
 }
 
-// Al final del archivo, después de mostrarProductos()
 mostrarProductos();
-actualizarContador(); // ← AGREGAR
+actualizarContador(); 

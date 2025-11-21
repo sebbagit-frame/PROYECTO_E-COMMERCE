@@ -74,7 +74,7 @@
 
 
             <h3>Ordenar por <i class="bi bi-sort-down"></i></h3>
-                <select>
+                <select id="select-ordenar">
                     <option value="relevancia">Filtro: Precios</option>
                     <option value="precio-asc">Precio: Menor a Mayor</option>
                     <option value="precio-desc">Precio: Mayor a Menor</option>
@@ -102,6 +102,16 @@
                 </section>
 
 
+                 <!-- ver products -->
+        <div class="tab-content active" id="productos">
+            <section class="loading" id="loading">
+                <p><i class="bi bi-arrow-clockwise" style="animation: spin 1s linear infinite;"></i>
+                Cargando productos..</p>
+            </section>
+            <div class="productos-grid" id="productosGrid"></div>
+        </div>
+
+
                 <section class="sect-filters-category">
 
                     <div class="container-filter">
@@ -118,7 +128,7 @@
                     <div class="container-category">
                         <h3>Ordenar por <i class="bi bi-sort-down"></i></h3>
 
-                        <select>
+                        <select id="select-ordenar">
                             <option value="relevancia">Más vendidos</option>
                             <option value="precio-asc">Precio: Menor a Mayor</option>
                             <option value="precio-desc">Precio: Mayor a Menor</option>
@@ -130,6 +140,12 @@
                 </section>
 
 
+
+
+
+        <div class="container-titulo-filtro">
+            <h1 id="titulo-filtro">Todos los productos</h2>
+        </div>
                 
         <section class="sect__products">   
             <!-- desde JS -->

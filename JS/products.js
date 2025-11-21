@@ -34,12 +34,12 @@ function normalizacion(response) {
             airtableId: producto.id,
             nombre: producto.fields.Name,
             imagen: producto.fields.Img || "",
-            precio: producto.fields.Price,
-            categoria: producto.fields.Category,
+            precio: producto.fields.Price || 0,
+            categoria: producto.fields.Category || 'Otros',
             id: producto.fields.ID,
-            cuotas: producto.fields.Cuota,
-            valorCuota: producto.fields.Valor,
-            genero: producto.fields.Genero
+            cuotas: producto.fields.Cuota || 0,
+            valorCuota: producto.fields.Valor || 0,
+            genero: producto.fields.Genero || 'Unisex'
         }));
     } catch (error) {
         console.error("Error al normalizar los productos:", error);
@@ -50,6 +50,9 @@ function normalizacion(response) {
 function renderizarProductos(arrayProductos) {
     const contenedor = document.querySelector('.sect__products');
     contenedor.innerHTML = '';
+
+    const loading = document.getElementById('loading');
+    loading.style.display = 'none';
     
     arrayProductos.forEach(producto => {
         const productoHTML = `
@@ -74,10 +77,11 @@ function renderizarProductos(arrayProductos) {
 }
 
 async function cargarProductos() {
+    document.getElementById('loading').style.display = 'block';
     const response = await obtenerProductos();
     productos = normalizacion(response);
-    console.log('Productos cargados:', productos);
     renderizarProductos(productos);
+    // console.log('Productos cargados:', productos);
 }
 
 cargarProductos();
@@ -85,25 +89,21 @@ cargarProductos();
 // ============================================
 //  FILTROS
 // ============================================
-
-const categLink = document.querySelectorAll('aside ul li a');
-const btn_tosee = document.querySelector('aside div #btn-ver-todos');
+const categLink = document.querySelectorAll('aside ul:nth-of-type(1) li a'); 
 
 categLink.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
 
+        const categClick = link.innerHTML.trim().toUpperCase(); 
+        
         categLink.forEach(l => l.style.color = "#7777");
         link.style.color = "white";
-        const categClick = link.innerHTML;
-    
+        
         const productosFiltrs = productos.filter(producto => {
-            return producto.categoria === categClick;
+            return producto.categoria && producto.categoria.trim().toUpperCase() === categClick;
         });
             
-        const contenedor = document.querySelector('.sect__products');
-        contenedor.innerHTML = '';
-        
         renderizarProductos(productosFiltrs);
     });
 });
@@ -111,35 +111,116 @@ categLink.forEach(link => {
 const btnVerTodos = document.getElementById('btn-ver-todos');
 
 btnVerTodos.addEventListener('click', () => {
-    const contenedor = document.querySelector('.sect__products');
-    contenedor.innerHTML = '';
+    const allLinks = document.querySelectorAll('aside ul a'); 
+    allLinks.forEach(l => l.style.color = "#7777");
+    
     renderizarProductos(productos);
 });
 
 
 // filter gen
-const li_h = document.querySelector('aside li #link-hombres');
-const li_m = document.querySelector('aside li #link-mujeres');
+const generoLink = document.querySelectorAll('aside ul:nth-of-type(2) li a'); 
+
+generoLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const generoClick = link.innerHTML.trim().toUpperCase(); 
+        
+        generoLink.forEach(l => l.style.color = "#7777");
+        link.style.color = "white";
+
+        const productosFiltrs = productos.filter(producto => {
+            return producto.genero && producto.genero.trim().toUpperCase() === generoClick;
+        });
+
+        renderizarProductos(productosFiltrs);
+    });
+});
 
 
+
+// order for price
+const selectOrdenar = document.querySelector('#select-ordenar');
+
+selectOrdenar.addEventListener('change', () => {
+    const opcionSelec = selectOrdenar.value;
+    let productosOrdenados = [...productos];
+
+    if (opcionSelec === 'precio-asc') {
+        productosOrdenados.sort((a, b) => a.precio - b.precio);
+    } else if (opcionSelec === 'precio-desc') {
+        productosOrdenados.sort((a, b) => b.precio - a.precio);
+    }
+    renderizarProductos(productosOrdenados);
+});
+
+
+
+
+// agregando titulo filtro
+
+function actualizarTitulo(texto) {
+    const titulo = document.getElementById('titulo-filtro');
+    if (titulo) {
+        titulo.textContent = texto;
+    }
+}
+
+
+// filter for category
 categLink.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
 
+        const categClick = link.innerHTML.trim();
+        
         categLink.forEach(l => l.style.color = "#7777");
         link.style.color = "white";
-        const categClick = link.innerHTML;
-    
-        const productosFiltrs = productos.filter(producto => {
-            return producto.genero === categClick;
-        });
-            
-        const contenedor = document.querySelector('.sect__products');
-        contenedor.innerHTML = '';
         
+        const productosFiltrs = productos.filter(producto => {
+            return producto.categoria && producto.categoria.trim().toUpperCase() === categClick.toUpperCase();
+        });
+        
+        productosActuales = productosFiltrs;
         renderizarProductos(productosFiltrs);
+        actualizarTitulo(categClick);
     });
 });
+
+// btn todos
+btnVerTodos.addEventListener('click', () => {
+    const allLinks = document.querySelectorAll('aside ul a'); 
+    allLinks.forEach(l => l.style.color = "#7777");
+    
+    selectOrdenar.value = 'relevancia';
+    
+    productosActuales = [...productos];
+    renderizarProductos(productosActuales);
+    actualizarTitulo('Todos los productos');
+});
+
+// filter for genro
+generoLink.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        
+        const generoClick = link.innerHTML.trim();
+        
+        generoLink.forEach(l => l.style.color = "#7777");
+        link.style.color = "white";
+
+        const productosFiltrs = productos.filter(producto => {
+            return producto.genero && producto.genero.trim().toUpperCase() === generoClick.toUpperCase();
+        });
+
+        productosActuales = productosFiltrs;
+        renderizarProductos(productosFiltrs);
+        actualizarTitulo(`Productos para ${generoClick}`);
+    });
+});
+
+
 
 
 

@@ -1,10 +1,7 @@
-import { AIRTABLE_TOKEN, BASE_ID, TABLE_NAME } from './env.js';
-
-const AIRTABLE_TOKEN = AIRTABLE_TOKEN;
-const BASE_ID = BASE_ID;
-const TABLE_NAME = TABLE_NAME;
+const AIRTABLE_TOKEN = "pattE62aK3OsLsuoN.f371ce5fbfbb56192a6328384b9db1f5cbb2a3cb5568bb9b9320e37843144249";
+const BASE_ID = "appbj6ACXLPcX3n5Q";
+const TABLE_NAME = "Products";
 const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
-
 
 
 // func get products
@@ -31,7 +28,7 @@ async function obtenerProductos() {
     }
 }
 
-// crear product - POST
+// crear product
 async function crearProducto(producto) {
     try {
         const response = await fetch(API_URL, {
@@ -60,59 +57,10 @@ async function crearProducto(producto) {
     }
 }
 
-// actualizar product - PATCH
-async function actualizarProducto(id, producto) {
-    try {
-        const response = await fetch(`${API_URL}/${id}`, {
-            method: 'PATCH',
-            headers: {
-                'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                fields: producto
-            })
-        });
 
-        const data = await response.json();
-        
-        if (data.id) {
-            mostrarMensaje('PRODUCTO ACTUALIZADO EXITOSAMENTE', 'success');
-            return data;
-        } else {
-            throw new Error('Error al actualizar producto');
-        }
-    } catch (error) {
-        console.error('Error al actualizar producto:', error);
-        mostrarMensaje('ERROR AL ACTUALIZAR PRODUCTO', 'error');
-        return null;
-    }
-}
 
-// eliminar product - DELETE
-async function eliminarProducto(id) {
-    try {
-        const response = await fetch(`${API_URL}/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Authorization': `Bearer ${AIRTABLE_TOKEN}`
-            }
-        });
 
-        const data = await response.json();
-        
-        if (data.deleted) {
-            mostrarMensaje('PRODUCTO ELIMINADO EXITOSAMENTE', 'success');
-            return true;
-        } else {
-            throw new Error('Error al eliminar producto');
-        }
-    } catch (error) {
-        console.error('Error al eliminar producto:', error);
-        mostrarMensaje('ERROR AL ELIMINAR PRODUCTO', 'error');
-        return false;
-    }
-}
+
 
 // ============================================
 // func dom
@@ -155,7 +103,7 @@ function renderizarProductos(productos) {
                     <button class="btn btn-edit" onclick="abrirModalEditar('${producto.id}', '${fields.Name}', ${fields.Price}, '${fields.Category}', '${fields.Genero}', '${fields.Img}')">
                         <i class="bi bi-pencil-fill"></i> EDITAR
                     </button>
-                    <button class="btn btn-danger" onclick="confirmarEliminar('${producto.id}', '${fields.Name}')">
+                    <button class="btn btn-danger" onclick="eliminarProducto('${producto.id}')">
                         <i class="bi bi-trash-fill"></i> ELIMINAR
                     </button>
                 </div>
@@ -168,6 +116,8 @@ async function cargarProductos() {
     document.getElementById('loading').style.display = 'block';
     const productos = await obtenerProductos();
     renderizarProductos(productos);
+    console.log(productos);
+    
 }
 
 function abrirModalEditar(id, nombre, precio, categoria, genero, imagen) {
@@ -193,6 +143,7 @@ async function confirmarEliminar(id, nombre) {
         }
     }
 }
+
 
 // ============================================
 // eventos

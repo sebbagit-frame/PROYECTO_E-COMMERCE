@@ -156,10 +156,31 @@ selectOrdenar.addEventListener('change', () => {
 });
 
 
+// buscador
+const inputBuscar = document.getElementById('input-buscar');
+
+inputBuscar.addEventListener('input', () => {
+    const textoBuscar = inputBuscar.value.toLowerCase();
+    
+    if (textoBuscar === '') {
+        productosActuales = productos;
+        renderizarProductos(productos);
+        actualizarTitulo('Todos los productos');
+        return;
+    }
+    
+    const productosFiltrados = productos.filter(producto => {
+        return producto.nombre.toLowerCase().includes(textoBuscar);
+    });
+    
+    productosActuales = productosFiltrados;
+    renderizarProductos(productosFiltrados);
+    actualizarTitulo(`Resultados para: "${inputBuscar.value}"`);
+});
+
 
 
 // agregando titulo filtro
-
 function actualizarTitulo(texto) {
     const titulo = document.getElementById('titulo-filtro');
     if (titulo) {

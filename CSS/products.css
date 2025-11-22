@@ -492,6 +492,30 @@ p{
 }
 
 
+/* buscandor */
+
+.container-buscador {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#input-buscar {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #777;
+    background-color: #1a1a1a;
+    color: white;
+    width: 300px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#input-buscar:focus {
+    outline: none;
+    border-color: white;
+}
+
+
 .container-titulo-filtro{
     display: flex;
     justify-content: left;

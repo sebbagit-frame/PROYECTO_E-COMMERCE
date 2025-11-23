@@ -332,6 +332,7 @@ main{
     align-items: center;
     padding: 40px;
     background: #0d0d0d;
+    font-size: 0.78rem;
 }
 
 .container__2sections{
@@ -431,6 +432,7 @@ main{
 
 .cont__tittleAccounts h3{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 

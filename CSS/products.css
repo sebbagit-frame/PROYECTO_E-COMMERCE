@@ -496,7 +496,7 @@ p{
 
 .container-buscador {
     display: flex;
-    justify-content: center;
+    justify-content: left1;
     padding: 20px;
 }
 
@@ -808,9 +808,13 @@ footer{
     }
 
     .sect__products{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         padding: 2em;
         grid-template-columns: repeat(2, 1fr);
-         width: 90%;
     }
 
 
@@ -937,6 +941,11 @@ footer{
 
         /* MAIN */
 
+    #titulo-filtro{
+        width: 100%;
+        text-align: center;
+    }
+    
     .sect__products {
         grid-template-columns: 1fr; 
     }
@@ -974,8 +983,12 @@ footer{
     }
 
 
+    /* BUSCADOR */
 
-
+    .container-buscador input{
+        display: flex;
+        text-align: center;
+    }
 
             /* PRE-FOOTER */
 

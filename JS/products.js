@@ -81,7 +81,7 @@ async function cargarProductos() {
     const response = await obtenerProductos();
     productos = normalizacion(response);
     renderizarProductos(productos);
-    // console.log('Productos cargados:', productos);
+    console.log('Productos cargados:', productos);
 }
 
 cargarProductos();

@@ -661,7 +661,23 @@ footer{
     margin-right: 1000px;
 }
 
+.container__copyright{
+    display: flex;
+    gap: 2em;
+}
 
+.container__copyright a{
+    color: #4e4e4e;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.container__copyright a:hover{
+    text-decoration: underline;
+    transition: 0.3s;
+}
 
 
                             /* RESPONSIVE */

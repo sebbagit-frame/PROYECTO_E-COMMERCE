@@ -1,7 +1,3 @@
-// ============================================
-//  ICONO RESPONSIVE
-// ============================================
-
 const menuIcon = document.querySelector(".menu-icon");
 const menuList = document.querySelector(".menu-list");
 

@@ -98,6 +98,7 @@ header{
     display: flex;
     align-items: center;
     font-size: 19px;
+    color: #0f0f0f;
 }
 
 .container__i-carrito{

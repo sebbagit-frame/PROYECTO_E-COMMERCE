@@ -18,13 +18,10 @@ formLogin.addEventListener('submit', (e) => {
     
     // Verificar credenciales
     if (usuario === USUARIO_ADMIN && password === PASSWORD_ADMIN) {
-        // Login correcto
-        localStorage.setItem('adminLogueado', 'true');
+        localStorage.setItem(usuario, password);
         
-        // Redirigir a la página de admin
         window.location.href = 'admin.html';
     } else {
-        // Login incorrecto
         mensajeError.style.display = 'block';
         
         // Ocultar mensaje después de 3 segundos

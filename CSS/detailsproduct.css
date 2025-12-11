@@ -272,7 +272,21 @@ p, h1, h2, h3, span{
 }
 
 
-
+.confirmAdd{
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    padding: 15px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
 
 
                     /* TALLES BOTONES */

@@ -92,3 +92,86 @@ async function crearPedidoAirtable(datosPedido) {
 
 
 
+// submit del formulario de pago
+
+btnSubmit.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    // validar método de pago seleccionado
+    const metodoPago = document.getElementById('metodo-pago').value;
+    if (metodoPago == '') {
+        alert('Por favor, selecciona un método de pago');
+        return;
+    }
+
+    // validar campos de facturación
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const direccion = document.getElementById('direccion').value;
+    const provincia = document.getElementById('provincia').value;
+    const codigo = document.getElementById('codigo').value;
+
+    if (nombre == '' || email == '' || direccion == '' || provincia == '' || codigo == '') {
+        alert('Por favor, completa todos los campos obligatorios');
+        return;
+    }
+
+    // validar campos de pago según el método seleccionado
+    if (metodoPago === 'tarjeta') {
+        const numeroTarjeta = document.getElementById('numero-tarjeta').value;
+        const vencimiento = document.getElementById('vencimiento').value;
+        const ccv = document.getElementById('ccv').value;
+
+        if (numeroTarjeta == '' || vencimiento == '' || ccv == '') {
+            alert('Por favor, completa todos los datos de la tarjeta');
+            return;
+        }
+    }
+
+    // desactivar el botón para evitar múltiples envíos
+    btnSubmit.disabled = true;
+    btnSubmit.textContent = "Procesando pedido...";
+    
+    // capturar datos de ambos formularios
+    const facturacionData = new FormData(formFacturacion);
+    const pagoData = new FormData(formPago);
+    
+    // crear el Detalle de la Compra
+    const detalleCompra = carrito.map(p => 
+        `${p.cantidad}x ${p.nombre} (Talle: ${p.talle}) - $${p.precio.toLocaleString('es-AR')}`
+    ).join('; ');
+    
+    // crear el objeto para enviar a Airtable
+    const pedidoAirtable = {
+        "NombreCliente": nombre,
+        "Dirección": direccion,
+        "Provincia": provincia,
+        "CP": Number(codigo),
+        "Total": calcularTotal(),
+        "MP": metodoPago,
+        "Detalle": detalleCompra,
+    };
+
+    console.log('==== VERIFICACIÓN ANTES DE ENVIAR ====');
+    console.log('Nombre del Cliente:', nombre);
+    console.log('Dirección:', direccion);
+    console.log('Provincia:', provincia);
+    console.log('CP:', codigo);
+    console.log('Total:', calcularTotal());
+    console.log('MP:', metodoPago);
+    console.log('Detalle:', detalleCompra);
+    console.log('Objeto completo:', pedidoAirtable);
+
+    console.log('Datos a enviar:', pedidoAirtable);
+
+    // enviar a Airtable
+    try {
+        const resultado = await crearPedidoAirtable(pedidoAirtable);
+        console.log('Pedido creado exitosamente:', resultado);
+        finalizarExito();
+    } catch (error) {
+        console.error('Error al procesar el pedido:', error);
+        btnSubmit.disabled = false;
+        btnSubmit.textContent = "Confirmar compra";
+    }
+});

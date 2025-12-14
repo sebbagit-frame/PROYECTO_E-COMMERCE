@@ -144,6 +144,7 @@ btnSubmit.addEventListener('click', async (e) => {
     // crear el objeto para enviar a Airtable
     const pedidoAirtable = {
         "NombreCliente": nombre,
+        "Email": email,
         "Dirección": direccion,
         "Provincia": provincia,
         "CP": Number(codigo),

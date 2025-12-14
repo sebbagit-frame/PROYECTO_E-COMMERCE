@@ -152,17 +152,16 @@ btnSubmit.addEventListener('click', async (e) => {
         "Detalle": detalleCompra,
     };
 
-    console.log('==== VERIFICACIÓN ANTES DE ENVIAR ====');
-    console.log('Nombre del Cliente:', nombre);
-    console.log('Dirección:', direccion);
-    console.log('Provincia:', provincia);
-    console.log('CP:', codigo);
-    console.log('Total:', calcularTotal());
-    console.log('MP:', metodoPago);
-    console.log('Detalle:', detalleCompra);
-    console.log('Objeto completo:', pedidoAirtable);
+    // console.log('Nombre del Cliente:', nombre);
+    // console.log('Dirección:', direccion);
+    // console.log('Provincia:', provincia);
+    // console.log('CP:', codigo);
+    // console.log('Total:', calcularTotal());
+    // console.log('MP:', metodoPago);
+    // console.log('Detalle:', detalleCompra);
+    // console.log('Objeto completo:', pedidoAirtable);
 
-    console.log('Datos a enviar:', pedidoAirtable);
+    // console.log('Datos a enviar:', pedidoAirtable);
 
     // enviar a Airtable
     try {
@@ -244,18 +243,18 @@ if (inputCCV) {
 // FUNCIÓN FINALIZAR ÉXITO
 
 function finalizarExito() {
-    // limpia el carrito
+
     localStorage.removeItem('carrito');
     
     // mensaje de éxito
     const mainContent = document.querySelector('main'); 
     mainContent.innerHTML = `
-        <div style="text-align: center; padding: 50px;">
-            <i class="bi bi-check-circle-fill" style="font-size: 3rem; color: #4CAF50;"></i>
-            <h1 style="color: #4CAF50;">¡Compra Realizada con Éxito!</h1>
-            <p>Tu pedido ha sido registrado. Recibirás la confirmación pronto.</p>
-            <a href="products.html" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
-                Volver a la tienda
+        <div class="container-exito">
+            <i class="bi bi-check-circle-fill icono-exito"></i>
+            <h1 class="titulo-exito">¡Compra Realizada con Éxito!</h1>
+            <p class="mensaje-exito">Tu pedido ha sido registrado. Recibirás la confirmación pronto.</p>
+            <a href="products.html" class="btn-volver">
+                <i class="bi bi-shop"></i> Volver a la tienda
             </a>
         </div>
     `;

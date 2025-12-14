@@ -203,3 +203,39 @@ if (inputTarjeta) {
         e.target.value = valorFormateado;
     });
 }
+
+
+// Formatear fecha de vencimiento (MM/AA)
+const inputVencimiento = document.getElementById('vencimiento');
+if (inputVencimiento) {
+    inputVencimiento.addEventListener('input', function(e) {
+        let valor = e.target.value.replace(/\D/g, '');
+        
+        // maximo 4 dígitos
+        if (valor.length > 4) {
+            valor = valor.substring(0, 4);
+        }
+        
+        // agregar barra después de 2 dígitos
+        if (valor.length >= 2) {
+            valor = valor.substring(0, 2) + '/' + valor.substring(2);
+        }
+        
+        e.target.value = valor;
+    });
+}
+
+// formatear CCV (3 dígitos)
+const inputCCV = document.getElementById('ccv');
+if (inputCCV) {
+    inputCCV.addEventListener('input', function(e) {
+        let valor = e.target.value.replace(/\D/g, '');
+        
+        // máximo 3 dígitos
+        if (valor.length > 3) {
+            valor = valor.substring(0, 3);
+        }
+        
+        e.target.value = valor;
+    });
+}

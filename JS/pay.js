@@ -175,3 +175,31 @@ btnSubmit.addEventListener('click', async (e) => {
         btnSubmit.textContent = "Confirmar compra";
     }
 });
+
+
+// FORMATEAR NÚMERO DE TARJETA
+
+// agregar espacios cada 4 dígitos en el número de tarjeta
+const inputTarjeta = document.getElementById('numero-tarjeta');
+if (inputTarjeta) {
+    inputTarjeta.addEventListener('input', function(e) {
+        let valor = e.target.value.replace(/\s/g, '');
+        valor = valor.replace(/\D/g, '');
+        
+        // 16 dígitos máximo
+        if (valor.length > 16) {
+            valor = valor.substring(0, 16);
+        }
+        
+        // agregar espacios cada 4 dígitos
+        let valorFormateado = '';
+        for (let i = 0; i < valor.length; i++) {
+            if (i > 0 && i % 4 == 0) {
+                valorFormateado = valorFormateado + ' ';
+            }
+            valorFormateado = valorFormateado + valor[i];
+        }
+        
+        e.target.value = valorFormateado;
+    });
+}

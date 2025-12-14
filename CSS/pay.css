@@ -330,13 +330,17 @@ header{
 
 
 
-            /* mensaje de pago éxitoso */
+        /* mensaje de pago éxitoso */
 
 .container-exito {
     text-align: center;
     padding: 50px 20px;
     max-width: 600px;
     margin: 0 auto;
+    min-height: 66.7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .icono-exito {

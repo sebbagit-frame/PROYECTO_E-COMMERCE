@@ -107,40 +107,70 @@
 
     <div class="container__checkout-pay">
 
-        <h2>Método de pago</h2>
+    <h2>Método de pago</h2>
 
-        <form class="checkout__form">
+    <form class="checkout__form" id="form-pago"> 
 
+        <div class="form__group">
+            <label for="metodo-pago">Selecciona el método de pago</label>
+            <select id="metodo-pago" name="metodo-pago" required onchange="mostrarCamposPago()">
+                <option value="" selected disabled>Elegir opción</option>
+                <option value="tarjeta">Tarjeta de crédito / débito</option>
+                <option value="transferencia">Transferencia bancaria</option>
+            </select>
+        </div>
+
+        <div id="campos-tarjeta" style="display: none;">
             <div class="form__group">
-                <label for="codigo">Número de tarjeta</label>
-                <input type="text" id="codigo" name="codigo" placeholder="0000 0000 0000 0000" required>
+                <label for="numero-tarjeta">Número de tarjeta</label>
+                <input type="text" id="numero-tarjeta" name="numero-tarjeta" placeholder="0000 0000 0000 0000" required>
+            </div>
+            <div class="form__group">
+                <label for="vencimiento">Fecha de Vencimiento</label>
+                <input type="text" id="vencimiento" name="vencimiento" placeholder="MM/AA" required>
+            </div>
+            <div class="form__group">
+                <label for="ccv">CCV</label>
+                <input type="text" id="ccv" name="ccv" placeholder="xxx" required>
+            </div>
+        </div>
+
+        <div id="campos-transferencia" style="display: none;">
+            <p>Por favor, realiza la transferencia y luego haz clic en "Confirmar compra".</p>
+
+            <h3>Datos Bancarios</h3>
+            <div class="datos-bancarios">
+                <p>Titular: **BRUCS S.R.L.**</p>
+                <p>CBU: **0123456789012345678901**</p>
+                <p>Alias: **BRUCS.MODA.OFICIAL**</p>
+            </div>
             </div>
 
-            <div class="form__group">
-                <label for="metodo-pago">Método de pago</label>
-                <select id="metodo-pago" name="metodo-pago" required>
-                    <option value="">Seleccioná una opción</option>
-                    <option value="tarjeta">Tarjeta de crédito / débito</option>
-                    <option value="transferencia">Transferencia bancaria</option>
-                    <option value="mercado-pago">Mercado Pago</option>
-                </select>
-            </div>
-
-            <div class="form__group">
-                <label for="codigo">CCV</label>
-                <input type="text" id="cod-tj" name="cod-tj" placeholder="xxx" required>
-            </div>
-
-            <button type="submit" class="btn__checkout">Confirmar compra</button>
-        </form>
-
-     </div>
+    </form>
+</div>
 
     </section>
 
-    
+    <section class="resumen-pedido">
+    <h2>Tu Pedido</h2>
+    <div id="items-carrito">
+        <p>Cargando productos...</p> 
+    </div>
+    <hr>
+    <div class="totales">
+        <h4>SUBTOTAL: <span id="subtotal-carrito"></span></h4>
+        <h3>TOTAL FINAL: <span id="total-final"></span></h3>
+    </div>
+
+    <div class="btn-pay">
+        <button type="submit" id="btn-confirmar-compra" class="btn__checkout">Confirmar compra</button>
+    </div>
+</section>
 
     </div>
+
+
+
 
 </main>
 

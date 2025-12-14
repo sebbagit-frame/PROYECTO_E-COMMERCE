@@ -1,52 +1,94 @@
-// ============================================
-//  ICONO RESPONSIVE
-// ============================================
+const AIRTABLE_TOKEN = "patVP3N7vWgbYK2Rd.74b61e3c546bd16c69980ae469d8b350cf834ae5ba1e624e93f3b2a796c0f4f4";
+const BASE_ID = "appbj6ACXLPcX3n5Q";
+const TABLE_NAME = "Pedidos";
+const API_URL = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`;
 
-const menuIcon = document.querySelector(".menu-icon");
-const menuList = document.querySelector(".menu-list");
 
-menuIcon.addEventListener('click', () => {
-    menuList.classList.toggle('menu-active');
-});
-
-// func global para actualizar el contador -> products - details - carrito
-function actualizarContGlobal() {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+function mostrarCamposPago() {
+    const selectorPago = document.getElementById('metodo-pago');
+    const camposTarjeta = document.getElementById('campos-tarjeta');
+    const camposTransferencia = document.getElementById('campos-transferencia');
     
-    let totalProductos = 0;
-    carrito.forEach(producto => {
-        totalProductos = totalProductos + producto.cantidad;
-    });
+    const seleccion = selectorPago.value;
     
-    const contadorExistente = document.querySelector('.carrito-contador');
-    if (contadorExistente) {
-        contadorExistente.remove();
-    }
+    // ocultar ambos contenedores inicialmente
+    camposTarjeta.style.display = 'none';
+    camposTransferencia.style.display = 'none';
     
-    if (totalProductos > 0) {
-        const contaierCarrito = document.querySelector('.contaier__bi-cart4');
-        if (contaierCarrito) {
-            const contador = document.createElement('span');
-            contador.className = 'carrito-contador';
-            contador.textContent = totalProductos;
-            contador.style.cssText = `
-                position: absolute;
-                top: 20px;
-                right: 105px;
-                background-color: #ff0000;
-                color: white;
-                border-radius: 50%;
-                width: 22px;
-                height: 22px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 12px;
-                font-weight: bold;
-            `;
-            contaierCarrito.appendChild(contador);
-        }
+    // mostrar el contenedor correspondiente con if
+    if (seleccion === 'tarjeta') {
+        camposTarjeta.style.display = 'block';
+    } else if (seleccion === 'transferencia') {
+        camposTransferencia.style.display = 'block';
     }
 }
 
-actualizarContGlobal();
+
+const formFacturacion = document.querySelector('.checkout__form');
+const formPago = document.getElementById('form-pago');
+const btnSubmit = document.getElementById('btn-confirmar-compra'); 
+
+const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function calcularTotal() {
+    return carrito.reduce((acc, item) => acc + (item.precio * item.cantidad), 0);
+}
+
+
+// FUNCIÓN PARA CREAR PEDIDO EN AIRTABLE
+
+async function crearPedidoAirtable(datosPedido) {
+    console.log('=== INICIANDO ENVÍO A AIRTABLE ===');
+    console.log('URL:', API_URL);
+    console.log('Datos a enviar:', datosPedido);
+    
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "records": [
+                    {
+                        "fields": datosPedido
+                    }
+                ]
+            })
+        });
+
+        console.log('Status de respuesta:', response.status);
+
+        const data = await response.json();
+        
+        if (response.ok == false) {
+            console.error('=== ERROR DE AIRTABLE ===');
+            console.error('Código:', response.status);
+            console.error('Respuesta completa:', data);
+            
+            if (data.error) {
+                console.error('Mensaje de error:', data.error.message);
+                console.error('Tipo de error:', data.error.type);
+                alert('Error de Airtable: ' + data.error.message);
+            }
+            
+            return null;
+        }
+
+        console.log('=== PEDIDO CREADO CON ÉXITO ===');
+        console.log('Respuesta de Airtable:', data);
+        return data.records[0];
+    } catch (error) {
+        console.error('=== ERROR EN crearPedidoAirtable ===');
+        console.error('Tipo de error:', error.name);
+        console.error('Mensaje:', error.message);
+        console.error('Error completo:', error);
+        throw error; 
+    }
+}
+
+
+
+
+

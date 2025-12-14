@@ -329,6 +329,70 @@ header{
 
 
 
+
+            /* mensaje de pago éxitoso */
+
+.container-exito {
+    text-align: center;
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.icono-exito {
+    font-size: 4rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    animation: aparecer 0.5s ease-in-out;
+}
+
+.titulo-exito {
+    color: #4CAF50;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.mensaje-exito {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.btn-volver {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.btn-volver:hover {
+    background-color: #0056b3;
+}
+
+.btn-volver i {
+    margin-right: 8px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+
                    /* PRE-FOOTER */
 .sect-accRed{
     display: flex;

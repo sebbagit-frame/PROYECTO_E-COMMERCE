@@ -241,6 +241,34 @@ if (inputCCV) {
 }
 
 
+// FUNCIÓN FINALIZAR ÉXITO
+
+function finalizarExito() {
+    // limpia el carrito
+    localStorage.removeItem('carrito');
+    
+    // mensaje de éxito
+    const mainContent = document.querySelector('main'); 
+    mainContent.innerHTML = `
+        <div style="text-align: center; padding: 50px;">
+            <i class="bi bi-check-circle-fill" style="font-size: 3rem; color: #4CAF50;"></i>
+            <h1 style="color: #4CAF50;">¡Compra Realizada con Éxito!</h1>
+            <p>Tu pedido ha sido registrado. Recibirás la confirmación pronto.</p>
+            <a href="products.html" style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+                Volver a la tienda
+            </a>
+        </div>
+    `;
+    
+    // actualizar el contador global del carrito
+    if (typeof actualizarContGlobal === 'function') {
+        actualizarContGlobal();
+    }
+}
+
+
+
+
 
 
 

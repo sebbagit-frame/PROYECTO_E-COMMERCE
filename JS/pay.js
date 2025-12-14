@@ -267,7 +267,43 @@ function finalizarExito() {
 }
 
 
+// RENDERIZAR RESUMEN DEL PEDIDO
 
+function renderizarResumenPedido() {
+    const contenedorItems = document.getElementById('items-carrito');
+    const totalFinalElement = document.getElementById('total-final');
+    const subtotalElement = document.getElementById('subtotal-carrito');
+    
+    if (carrito.length === 0) {
+        contenedorItems.innerHTML = '<p>Tu carrito está vacío.</p>';
+        totalFinalElement.textContent = '$0';
+        subtotalElement.textContent = '$0';
+        document.querySelector('.container__forms').style.display = 'none';
+        return;
+    }
+    
+    let contenidoHTML = '';
+    let subtotal = 0;
+
+    carrito.forEach(item => {
+        const precioTotalItem = item.precio * item.cantidad;
+        subtotal += precioTotalItem;
+        
+        contenidoHTML += `
+            <div class="item-resumen">
+                <p><strong>${item.nombre}</strong> (Talle: ${item.talle})</p>
+                <p>${item.cantidad} x $${item.precio.toLocaleString('es-AR')} = <strong>$${precioTotalItem.toLocaleString('es-AR')}</strong></p>
+            </div>
+            <hr style="margin: 5px 0; border: none; border-top: 1px dashed #ccc;">
+        `;
+    });
+    
+    const totalConEnvio = subtotal; 
+
+    contenedorItems.innerHTML = contenidoHTML;
+    subtotalElement.textContent = `$${subtotal.toLocaleString('es-AR')}`;
+    totalFinalElement.textContent = `$${totalConEnvio.toLocaleString('es-AR')}`;
+}
 
 
 
@@ -323,3 +359,11 @@ function actualizarContGlobal() {
         }
     }
 }
+
+
+// INICIALIZAR AL CARGAR LA PÁGINA
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderizarResumenPedido();
+    actualizarContGlobal();
+});

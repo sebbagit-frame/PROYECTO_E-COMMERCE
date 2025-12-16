@@ -116,32 +116,7 @@ async function cargarProductos() {
     document.getElementById('loading').style.display = 'block';
     const productos = await obtenerProductos();
     renderizarProductos(productos);
-    console.log(productos);
-    
-}
-
-function abrirModalEditar(id, nombre, precio, categoria, genero, imagen) {
-    document.getElementById('editId').value = id;
-    document.getElementById('editNombre').value = nombre;
-    document.getElementById('editPrecio').value = precio;
-    document.getElementById('editCategoria').value = categoria;
-    document.getElementById('editGenero').value = genero;
-    document.getElementById('editImagen').value = imagen;
-    
-    document.getElementById('modalEditar').classList.add('active');
-}
-
-function cerrarModal() {
-    document.getElementById('modalEditar').classList.remove('active');
-}
-
-async function confirmarEliminar(id, nombre) {
-    if (confirm('ESTAS SEGURO DE ELIMINAR "' + nombre + '"?')) {
-        const exito = await eliminarProducto(id);
-        if (exito) {
-            await cargarProductos();
-        }
-    }
+    // console.log(productos);    
 }
 
 
@@ -204,5 +179,109 @@ document.getElementById('formEditar').addEventListener('submit', async (e) => {
         await cargarProductos();
     }
 });
+
+
+
+
+// eliminar product - DELETE
+async function eliminarProducto(id) {
+    try {
+        const response = await fetch(`${API_URL}/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': `Bearer ${AIRTABLE_TOKEN}`
+            }
+        });
+
+        const data = await response.json();
+        
+        if (data.deleted) {
+            mostrarMensaje('PRODUCTO ELIMINADO EXITOSAMENTE', 'success');
+            return true;
+        } else {
+            throw new Error('Error al eliminar producto');
+        }
+    } catch (error) {
+        console.error('Error al eliminar producto:', error);
+        mostrarMensaje('ERROR AL ELIMINAR PRODUCTO', 'error');
+        return false;
+    }
+}
+
+
+async function confirmarEliminar(id, nombre) {
+    if (confirm(`ESTAS SEGURO DE ELIMINAR "${nombre}"?`)) {
+        const exito = await eliminarProducto(id);
+        if (exito) {
+            await cargarProductos();
+        }
+    }
+}
+
+
+// actualizar product - PATCH
+async function actualizarProducto(id, producto) {
+    try {
+        const response = await fetch(`${API_URL}/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                fields: producto
+            })
+        });
+
+        const data = await response.json();
+        
+        if (data.id) {
+            mostrarMensaje('PRODUCTO ACTUALIZADO EXITOSAMENTE', 'success');
+            return data;
+        } else {
+            throw new Error('Error al actualizar producto');
+        }
+    } catch (error) {
+        console.error('Error al actualizar producto:', error);
+        mostrarMensaje('ERROR AL ACTUALIZAR PRODUCTO', 'error');
+        return null;
+    }
+}
+
+
+
+// editar product - PATCH
+
+function abrirModalEditar(id, nombre, precio, categoria, genero, imagen) {
+    document.getElementById('editId').value = id;
+    document.getElementById('editNombre').value = nombre;
+    document.getElementById('editPrecio').value = precio;
+    document.getElementById('editCategoria').value = categoria;
+    document.getElementById('editGenero').value = genero;
+    document.getElementById('editImagen').value = imagen;
+    
+    document.getElementById('modalEditar').classList.add('active');
+}
+
+// EDITAR MODAL - CLOSE
+
+function cerrarModal() {
+    const modal = document.getElementById('modalEditar');
+    modal.classList.remove('active');
+    
+    document.getElementById('formEditar').reset();
+}
+
+const btnCancelar = document.getElementById('btnCancelarEdicion');
+if (btnCancelar) {
+    btnCancelar.addEventListener('click', (e) => {
+        e.preventDefault();
+        cerrarModal();
+    });
+}
+
+window.abrirModalEditar = abrirModalEditar;
+window.eliminarProducto = eliminarProducto;
+window.cerrarModal = cerrarModal;
 
 cargarProductos();
